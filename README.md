@@ -11,8 +11,9 @@ program to have a basic introduction to the C programming language.
 | Denny Ly          | Content Cell  |
 | Ruchira Kulkarni  | Content Cell  |
 
-### Contents
+## Contents
 In our project we will implement a 4-bit down counter in Verilog in four ways:
+
 1. Structurally
 2. Dataflow
 3. Johnson implementation (http://electronics-course.com/johnson-counter)
