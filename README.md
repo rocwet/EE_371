@@ -13,9 +13,9 @@ program to have a basic introduction to the C programming language.
 
 ### Contents
 In our project we will implement a 4-bit down counter in Verilog in four ways:
-1.  Structurally
-2.  Dataflow
-3.  Johnson implementation (http://electronics-course.com/johnson-counter)
-4.  Structurally
+1. Structurally
+2. Dataflow
+3. Johnson implementation (http://electronics-course.com/johnson-counter)
+4. Structurally
 
 Finally, we will also write a C program that behaves like a calculator.
