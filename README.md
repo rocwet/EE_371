@@ -1,22 +1,24 @@
-# Project 1
-The purpose of the project is to review our knowledge of Verilog and get familiar using
-old and new tools to model, synthesize, and test hardware. Finally, we will write a C
-program to have a basic introduction to the C programming language.
+# EE 371
+This repository is used to hold the project files for EE 371 taught under James K. Peckol.
+
 
 ## Authors
 
 | Name              | Role          |
 | -------------     | ------------- |
-| Minh Khuu         | Content Cell  |
-| Denny Ly          | Content Cell  |
-| Ruchira Kulkarni  | Content Cell  |
+| Minh Khuu         | Member        |
+| Denny Ly          | Member        |
+| Ruchira Kulkarni  | Member        |
 
 ## Contents
-In our project we will implement a 4-bit down counter in Verilog in four ways:
 
-1. Structurally
-2. Dataflow
-3. Johnson implementation (http://electronics-course.com/johnson-counter)
-4. Structurally
+It will contain 5 project files:
 
-Finally, we will also write a C program that behaves like a calculator.
+1. Introduction to the Lab Enviroment
+..* This lab is a basic review of Verilog and introduces the new tools we will be using for the rest of the quarter.
+..* We will create a 4-bit down counter in four ways (structurally, dataflow, behavioural [via Johnson counter], and schematically).
+..* We will create a C program that acts like a calculator.
+2. TBD
+3. TBD
+4. TBD
+5. TBD
