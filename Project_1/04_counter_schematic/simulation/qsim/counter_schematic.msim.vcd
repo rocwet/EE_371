@@ -3,7 +3,7 @@ $comment
 		vcd file counter_schematic.msim.vcd -direction
 $end
 $date
-	Thu Jan 07 20:57:25 2016
+	Thu Jan 07 21:09:38 2016
 $end
 $version
 	ModelSim Version 10.1e

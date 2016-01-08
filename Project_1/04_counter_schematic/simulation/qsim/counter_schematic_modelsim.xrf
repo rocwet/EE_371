@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/count_down_schematic.vwf
-source_file = 1, W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/count_down_schematic.bdf
-source_file = 1, W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/db/counter_schematic.cbx.xml
+source_file = 1, C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/count_down_schematic.vwf
+source_file = 1, C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/count_down_schematic.bdf
+source_file = 1, C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/db/counter_schematic.cbx.xml
 design_name = count_down_schematic
 instance = comp, \out[3]~output , out[3]~output, count_down_schematic, 1
 instance = comp, \out[2]~output , out[2]~output, count_down_schematic, 1
