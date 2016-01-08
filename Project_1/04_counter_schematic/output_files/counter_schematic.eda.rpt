@@ -1,5 +1,5 @@
 EDA Netlist Writer report for counter_schematic
-Thu Jan 07 20:57:23 2016
+Thu Jan 07 21:09:36 2016
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jan 07 20:57:23 2016 ;
+; EDA Netlist Writer Status ; Successful - Thu Jan 07 21:09:36 2016 ;
 ; Revision Name             ; counter_schematic                     ;
 ; Top-level Entity Name     ; count_down_schematic                  ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                         ;
-+----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                    ;
-+----------------------------------------------------------------------------------------------------+
-; W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//counter_schematic.vo ;
-+----------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                 ;
++------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                            ;
++------------------------------------------------------------------------------------------------------------+
+; C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//counter_schematic.vo ;
++------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +95,14 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Thu Jan 07 20:57:23 2016
-Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory="W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim/" counter_schematic -c counter_schematic
+    Info: Processing started: Thu Jan 07 21:09:35 2016
+Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim/ counter_schematic -c counter_schematic
 Info (119006): Selected device 5CGXFC7C7F23C8 for design "counter_schematic"
-Info (204019): Generated file counter_schematic.vo in folder "W:/My Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file counter_schematic.vo in folder "C:/Users/Minh/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 522 megabytes
-    Info: Processing ended: Thu Jan 07 20:57:23 2016
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Jan 07 21:09:36 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
