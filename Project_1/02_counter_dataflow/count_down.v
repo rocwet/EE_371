@@ -55,8 +55,7 @@ module D_FF(q, qBar, D, clk, rst);
   output q, qBar;
   reg q;
   not n1 (qBar, q);
-  always@ (negedge rst or posedge clk)
-  begin
+  always@ (negedge rst or posedge clk) begin
   if(!rst)
     q <= 0;
   else
