@@ -1,27 +1,24 @@
-# Create work library
-vlib work
-
-# Compile Verilog
-#     All Verilog files that are part of this design should have
-#     their own "vlog" line below.
-vlog "./count_down.v"
-
-# Call vsim to invoke simulator
-#     Make sure the last item on the line is the name of the
-#     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work count_down_testbench
-
-# Source the wave do file
-#     This should be the file that sets up the signal window for
-#     the module you are testing.
-do count_down_wave.do
-
-# Set the window types
-view wave
-view structure
-view signals
-
-# Run the simulation
-run -all
-
-# End
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /count_down_testbench/reset
+add wave -noupdate /count_down_testbench/clk
+add wave -noupdate -radix unsigned /count_down_testbench/out
+add wave -noupdate /count_down_testbench/i
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {219 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 265
+configure wave -valuecolwidth 93
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {0 ps} {473 ps}

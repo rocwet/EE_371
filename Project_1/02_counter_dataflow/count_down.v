@@ -1,5 +1,8 @@
 /*
 The count_down() module is a 4-bit down counter implemented using data flow.
+@ author    Minh Khuu
+@ date      2016.01.07
+@ version   Project 1.2 4-bit Down Counter - Data Flow
 
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
@@ -76,23 +79,69 @@ module D_FF(q, qBar, D, clk, rst);
 endmodule
 
 /* ---------------------------------------------------------------------------------------- */
-module count_down_testbench();
-  reg reset;
-  reg clk;
-  wire [3:0] out;
+/* ------------------------------------TEST BENCH------------------------------------------ */
+/* ---------------------------------------------------------------------------------------- */
 
-	count_down dut (.out(out), .reset(reset), .clk(clk));
+/*
+The count_down_testBench module tests the count_down module. 
+*/
+module count_down_testBench;
+
+  /* Wires for testing */
+  wire [3:0] out;
+  wire reset, clk;
+  
+  /* declare instance of count_down module */
+  count_down dut (.out(out), .reset(reset), .clk(clk));
+  
+  /* declare instance of test module */
+  count_down_tester aTest (reset, clk, out);
+  
+  /* file for gtkwave */
+  initial begin
+    $dumpfile("count_down_0.vcd");
+    $dumpvars(1, dut);
+  end
+  
+endmodule
+
+/*
+The count_down_tester module generates the reset and clock signals for testing.
+It also prints out, on stdout, the output and inputs of the count_down module.
+
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |resetOut   |1 bit    |The generated reset signal for testing.
+output    |clkOut     |1 bit    |The genereated clk signal for testing.
+input     |out        |4 bit    |The output signal used for printing to stdout.
+ */
+module count_down_tester(resetOut, clkOut, out);
+
+  /* Defining the output/input ports */
+  output reg resetOut, clkOut;
+  input [3:0] out;
+  
+  /* Delay Constant */
+  parameter DELAY = 10;
   integer i;
-	initial begin
-    clk = 0;
-    reset = 0; #200;
-    reset = 1; #10;
-    for(i = 0; i < 64; i = i + 1) begin
-      #10;
-      clk = 1;
-      #10;
-      clk = 0;
+  
+  /* Display information of ports to stdout */
+  initial begin
+    $display("\t\t resetOut \t clkOut \t out ");
+    $monitor("\t\t %b\t %b \t %d", resetOut, clkOut, out);
+  end
+  
+  /* Set values for ports w/ delays*/
+  initial begin
+    clkOut = 0;
+    resetOut = 0; 
+    #100 resetOut = 1; 
+    for(i = 0; i < 26; i = i + 1) begin
+      #DELAY clkOut = 1;
+      #DELAY clkOut = 0;
     end
+    resetOut = 0; 
+    #100 $finish;
 	end
   
 endmodule
