@@ -5,9 +5,7 @@ PORT DEFINITIONS
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
 output    |out        |4 bit    |The 4-bit output, counts from 15 to 0 in decimal.
------------------------------------------------------------------------------------
 input     |reset      |1 bit    |The reset signal (active low).
------------------------------------------------------------------------------------
 input     |clk        |1 bit    |The clock for the system.
 */
 module count_down(out, reset, clk);
@@ -76,13 +74,9 @@ PORT DEFINITIONS
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
 output    |q          |1 bit    |The present state.
------------------------------------------------------------------------------------
 output    |qBar       |1 bit    |The inverted present state.
------------------------------------------------------------------------------------
 input     |D          |1 bit    |The new state.
------------------------------------------------------------------------------------
 input     |clk        |1 bit    |The clock for the system.
------------------------------------------------------------------------------------
 input     |rst        |1 bit    |The reset signal (active low).
  */
 module D_FF(q, qBar, D, clk, rst);
