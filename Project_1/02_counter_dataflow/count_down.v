@@ -1,12 +1,12 @@
 /*
 The count_down() module is a 4-bit down counter implemented using data flow.
-PORT DEFINITIONS
------------------------------------------------------------------------------------
+
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
 output    |out        |4 bit    |The 4-bit output, counts from 15 to 0 in decimal.
 input     |reset      |1 bit    |The reset signal (active low).
 input     |clk        |1 bit    |The clock for the system.
+
 */
 module count_down(out, reset, clk);
 
@@ -44,33 +44,9 @@ module count_down(out, reset, clk);
 
 endmodule
 
-// test
-module count_down_testbench();
-  reg reset;
-  reg clk;
-  wire [3:0] out;
-
-	count_down dut (.out(out), .reset(reset), .clk(clk));
-  integer i;
-	initial begin
-    clk = 0;
-    reset = 0; #200;
-    reset = 1; #10;
-    for(i = 0; i < 64; i = i + 1) begin
-      #10;
-      clk = 1;
-      #10;
-      clk = 0;
-    end
-	end
-  
-endmodule
-
 /*
 The D_FF module is a D_Flip_Flop.  The code was given by James K. Peckol for EE371.
 
-PORT DEFINITIONS
------------------------------------------------------------------------------------
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
 output    |q          |1 bit    |The present state.
@@ -96,5 +72,27 @@ module D_FF(q, qBar, D, clk, rst);
   else
     q = D;
   end
+  
+endmodule
+
+/* ---------------------------------------------------------------------------------------- */
+module count_down_testbench();
+  reg reset;
+  reg clk;
+  wire [3:0] out;
+
+	count_down dut (.out(out), .reset(reset), .clk(clk));
+  integer i;
+	initial begin
+    clk = 0;
+    reset = 0; #200;
+    reset = 1; #10;
+    for(i = 0; i < 64; i = i + 1) begin
+      #10;
+      clk = 1;
+      #10;
+      clk = 0;
+    end
+	end
   
 endmodule
