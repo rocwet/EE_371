@@ -19,6 +19,18 @@ module count_down_johnson(out, reset, clk);
 		end
 	end
 	
+	always@ (negedge reset or posedge clk)
+	begin
+		if (!reset) out <= 4'b0000;
+		else 
+		begin
+			out[3] <= ~out[0];
+			out[2] <= out[3];
+			out[1] <= out[2];
+			out[0] <= out[1];
+		end
+	end
+	
 endmodule
 
 
