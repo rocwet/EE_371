@@ -99,7 +99,7 @@ module count_down_testBench;
   
   /* file for gtkwave */
   initial begin
-    $dumpfile("count_down_0.vcd");
+    $dumpfile("____gtkwave.vcd");
     $dumpvars(1, dut);
   end
   
