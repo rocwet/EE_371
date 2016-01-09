@@ -18,26 +18,16 @@ module count_down(out, reset, clk);
   input reset, clk;
   
   /* Wires for connection */
-  wire [3:0] new_out;
+  reg [3:0] new_out;
   wire [3:0] not_out;
-  wire s2_temp1, s2_temp2, s2_temp3;
-  wire s3_temp1, s3_temp2, s3_temp3;
-  
-  /* stage 2 intermediate operations */
-  and s2_1 (s2_temp1, not_out[2], not_out[1], not_out[0]);
-  or  s2_2 (s2_temp2, out[0], out[1]);
-  and s2_3 (s2_temp3, out[2], s2_temp2);
-  
-  /* stage 3 intermediate operations */
-  and s3_1 (s3_temp1, not_out[3], not_out[2], not_out[1], not_out[0]);
-  or  s3_2 (s3_temp2, out[2], out[1], out[0]);
-  and s3_3 (s3_temp3, out[3], s3_temp2);
-  
+
   /* Operation for each stage for the new state */
-  not  stage0_op (new_out[0], out[0]);
-  xnor stage1_op (new_out[1], out[1], out[0]);
-  or   stage2_op (new_out[2], s2_temp3, s2_temp1);
-  or   stage3_op (new_out[3], s3_temp1, s3_temp3);
+  assign new_out[0] = ~out[0];
+  assign new_out[1] = ~(out[1] ^ out[0]);
+  assign new_out[2] = (not_out[2] & not_out[1] & not_out[0]) +
+                      (out[3] & (out[2] + out[1] + out[0]));
+  assign new_out[3] = (not_out[3] & not_out[2] & not_out[1] & not_out[0]) +
+                      (out[3] & (out[2] + out[1] + out[0]));
   
   /* D_Flip_Flop for new state to present stage assignment */
   D_FF stage0 (.q(out[0]), .qBar(not_out[0]), .D(new_out[0]), .clk(clk), .rst(reset));
