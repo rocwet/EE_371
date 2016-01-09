@@ -19,14 +19,14 @@
 #
 # Quartus II 64-Bit
 # Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-# Date created = 17:33:31  January 08, 2016
+# Date created = 14:55:57  January 09, 2016
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		2_assignment_defaults.qdf
+#		ripple_counter_top_struct_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -39,29 +39,17 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY count_down
+set_global_assignment -name TOP_LEVEL_ENTITY ripple_counter_top_struct
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:33:31  JANUARY 08, 2016"
-set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:55:57  JANUARY 09, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_V16 -to out
-set_global_assignment -name VERILOG_FILE count_down.v
-set_global_assignment -name VERILOG_FILE test.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AC12 -to clk
-set_location_assignment PIN_AB12 -to reset
-set_location_assignment PIN_Y19 -to out[0]
-set_location_assignment PIN_W20 -to out[1]
-set_location_assignment PIN_W21 -to out[2]
-set_location_assignment PIN_Y21 -to out[3]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE DFlipFlop.v
+set_global_assignment -name VERILOG_FILE ripple_counter.v
