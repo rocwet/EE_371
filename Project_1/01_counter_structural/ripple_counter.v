@@ -43,7 +43,7 @@ module ripple_counter_testbench();
   
   /* file for gtkwave */
   initial begin
-    $dumpfile("ripple_counter_gate.vcd");
+    $dumpfile("____gtkwave____STRUCTURAL____.vcd");
     $dumpvars(1, dut);
   end
 endmodule
@@ -84,7 +84,7 @@ module ripple_counter_tester(resetOut, clkOut, out);
 		resetOut <= 0; 			@(posedge clkOut);
 		resetOut <= 1; 			@(posedge clkOut);
 		
-		for(i = 0; i < 100; i = i + 1) begin
+		for(i = 0; i < 26; i = i + 1) begin
 			@(posedge clkOut);
 		end
 		
