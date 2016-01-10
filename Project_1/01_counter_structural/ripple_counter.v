@@ -1,3 +1,16 @@
+/*
+The ripple_counter() module is a 4-bit down counter implemented using data flow.
+@ author    Denny Ly
+@ date      2016.01.07
+@ version   Project 1.1 =========== < 4-bit Ripple Down Counter [Structural] >
+
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |out        |4 bit    |The 4-bit output, counts from 15 to 0 in decimal.
+input     |reset      |1 bit    |The reset signal (active low).
+input     |clk        |1 bit    |The clock for the system.
+
+*/
 module ripple_counter(out, reset, clk);
 	input reset, clk;
 	output[3:0] out;
@@ -9,19 +22,37 @@ module ripple_counter(out, reset, clk);
 	DFlipFlop flip0 (.q(out[0]), .qBar(inv_out[0]), .D(inv_out[0]), .clk(clk), .rst(reset));
 endmodule
 
+
+/*
+The DFlipFlop module is a D_Flip_Flop.  The code was given by James K. Peckol for EE371.
+
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |q          |1 bit    |The present state.
+output    |qBar       |1 bit    |The inverted present state.
+input     |D          |1 bit    |The new state.
+input     |clk        |1 bit    |The clock for the system.
+input     |rst        |1 bit    |The reset signal (active low).
+ */
 module DFlipFlop(q, qBar, D, clk, rst);
-	input D, clk, rst;
-	output q, qBar;
-	
-	reg q;
-	not n1 (qBar, q);
-	always@ (negedge rst or posedge clk) begin
-		if(!rst)
-			q = 0;
-		else
-			q = D;
-	end
-endmodule 
+
+  /* Defining the output/input ports */
+  input D, clk, rst;
+  output q, qBar;
+  reg q;
+  
+  /* retrieve inverted output */
+  not n1 (qBar, q);
+  
+  /* update the present state with the next state */
+  always@ (negedge rst or posedge clk) begin
+  if(!rst)
+    q <= 0;
+  else
+    q = D;
+  end
+  
+endmodule
 
 /* ---------------------------------------------------------------------------------------- */
 /* ------------------------------------TEST BENCH------------------------------------------ */

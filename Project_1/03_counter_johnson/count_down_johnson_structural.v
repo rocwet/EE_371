@@ -28,7 +28,17 @@ module count_down_johnson_structural(out, reset, clk);
 	
 endmodule
 
+/*
+The DFlipFlop module is a D_Flip_Flop.  The code was given by James K. Peckol for EE371.
 
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |q          |1 bit    |The present state.
+output    |qBar       |1 bit    |The inverted present state.
+input     |D          |1 bit    |The new state.
+input     |clk        |1 bit    |The clock for the system.
+input     |rst        |1 bit    |The reset signal (active low).
+ */
 module DFlipFlop(q, qBar, D, clk, rst);
 
   /* Defining the output/input ports */

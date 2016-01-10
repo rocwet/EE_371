@@ -2,7 +2,7 @@
 The count_down() module is a 4-bit down counter implemented using data flow.
 @ author    Minh Khuu
 @ date      2016.01.07
-@ version   Project 1.2 4-bit Down Counter - Data Flow
+@ version   Project 1.2 =========== < 4-bit Asynchronous Down Counter [Dataflow] >
 
 TYPE      |NAME       |WIDTH    |DESCRIPTION       
 -----------------------------------------------------------------------------------
