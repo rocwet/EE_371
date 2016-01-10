@@ -23,9 +23,9 @@ module count_down_dataflow(out, reset, clk);
 
   /* Operation for each stage for the new state */
   assign new_out[0] = ~out[0];
-  assign new_out[1] = (out[1] ~^ out[0]);
-  assign new_out[2] = (~out[2] & ~out[1] & ~out[0]) + (out[2] & (out[1] + out[0]));
-  assign new_out[3] = (~out[3] & ~out[2] & ~out[1] & ~out[0]) + (out[3] & (out[2] + out[1] + out[0]));
+  assign new_out[1] = ~(out[1] ^ out[0]);
+  assign new_out[2] = (~out[2] & ~out[1] & ~out[0]) | (out[2] & (out[1] | out[0]));
+  assign new_out[3] = (~out[3] & ~out[2] & ~out[1] & ~out[0]) | (out[3] & (out[2] | out[1] | out[0]));
   
   /* D_Flip_Flop for new state to present stage assignment */
   D_FF stage0 (.q(out[0]), .qBar(not_out[0]), .D(new_out[0]), .clk(clk), .rst(reset));
