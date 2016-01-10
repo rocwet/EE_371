@@ -11,7 +11,7 @@ input     |reset      |1 bit    |The reset signal (active low).
 input     |clk        |1 bit    |The clock for the system.
 
 */
-module count_down(out, reset, clk);
+module count_down_structural(out, reset, clk);
 
   /* Defining the output/input ports */
   output [3:0] out;
@@ -85,21 +85,21 @@ endmodule
 /*
 The count_down_testBench module tests the count_down module. 
 */
-module count_down_testBench;
+module count_down_structural_testBench;
 
   /* Wires for testing */
   wire [3:0] out;
   wire reset, clk;
   
   /* declare instance of count_down module */
-  count_down dut (.out(out), .reset(reset), .clk(clk));
+  count_down_structural dut (.out(out), .reset(reset), .clk(clk));
   
   /* declare instance of test module */
-  count_down_tester aTest (reset, clk, out);
+  count_down_structural_tester aTest (reset, clk, out);
   
   /* file for gtkwave */
   initial begin
-    $dumpfile("____gtkwave.vcd");
+    $dumpfile("____gtkwave____STRUCTURAL____.vcd");
     $dumpvars(1, dut);
   end
   
@@ -115,7 +115,7 @@ output    |resetOut   |1 bit    |The generated reset signal for testing.
 output    |clkOut     |1 bit    |The genereated clk signal for testing.
 input     |out        |4 bit    |The output signal used for printing to stdout.
  */
-module count_down_tester(resetOut, clkOut, out);
+module count_down_structural_tester(resetOut, clkOut, out);
 
   /* Defining the output/input ports */
   output reg resetOut, clkOut;

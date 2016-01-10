@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Jan 10 00:09:50 2016
+[*]
+[dumpfile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\02_counter_dataflow\____gtkwave____STRUCTURAL____.vcd"
+[dumpfile_mtime] "Sun Jan 10 00:05:57 2016"
+[dumpfile_size] 2001
+[savefile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\02_counter_dataflow\____gtkwave____STRUCTURAL____.gtkw"
+[timestart] 0
+[size] 1162 683
+[pos] -1 -1
+*-7.459992 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] count_down_testBench.
+[sst_width] 197
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 182
+@25
+count_down_testBench.dut.out[3:0]
+@28
+count_down_testBench.dut.clk
+count_down_testBench.dut.reset
+[pattern_trace] 1
+[pattern_trace] 0
