@@ -11,7 +11,7 @@ input     |reset      |1 bit    |The reset signal (active low).
 input     |clk        |1 bit    |The clock for the system.
 
 */
-module count_down_johnson(out, reset, clk);
+module count_down_johnson_structural(out, reset, clk);
   
   /* Defining the output/input ports */
   output [3:0] out;
@@ -21,22 +21,10 @@ module count_down_johnson(out, reset, clk);
 	wire [3:0] not_out;
   
   /* Next state logic */
-	DFlipFlop d0 (.q(out[3]), .qBar(), .D(not_out[3]), .clk(clk), .rst(reset));
-	DFlipFlop d1 (.q(out[2]), .qBar(), .D(out[0]), .clk(clk), .rst(reset));
-	DFlipFlop d2 (.q(out[1]), .qBar(), .D(out[1]), .clk(clk), .rst(reset));
-	DFlipFlop d3 (.q(out[0]), .qBar(not_out[3]), .D(out[2]), .clk(clk), .rst(reset));
-	
-	// always@ (negedge reset or posedge clk)
-	// begin
-		// if (!reset) out <= 4'b0000;
-		// else 
-		// begin
-			// out[3] <= ~out[0];
-			// out[2] <= out[3];
-			// out[1] <= out[2];
-			// out[0] <= out[1];
-		// end
-	// end
+	DFlipFlop d3 (.q(out[3]), .qBar(), .D(not_out[0]), .clk(clk), .rst(reset));
+	DFlipFlop d2 (.q(out[2]), .qBar(), .D(out[3]), .clk(clk), .rst(reset));
+	DFlipFlop d1 (.q(out[1]), .qBar(), .D(out[2]), .clk(clk), .rst(reset));
+	DFlipFlop d0 (.q(out[0]), .qBar(not_out[0]), .D(out[1]), .clk(clk), .rst(reset));
 	
 endmodule
 
@@ -75,14 +63,14 @@ module count_down_johnson_testBench;
   wire reset, clk;
   
   /* declare instance of count_down module */
-  count_down_johnson dut (.out(out), .reset(reset), .clk(clk));
+  count_down_johnson_structural dut (.out(out), .reset(reset), .clk(clk));
   
   /* declare instance of test module */
-  count_down_johnson_tester aTest (reset, clk, out);
+  count_down_johnson_structural_tester aTest (reset, clk, out);
   
   /* file for gtkwave */
   initial begin
-    $dumpfile("____gtkwave.vcd");
+    $dumpfile("____gtkwave____STRUCTURAL____.vcd");
     $dumpvars(1, dut);
   end
   
@@ -98,7 +86,7 @@ output    |resetOut   |1 bit    |The generated reset signal for testing.
 output    |clkOut     |1 bit    |The genereated clk signal for testing.
 input     |out        |4 bit    |The output signal used for printing to stdout.
  */
-module count_down_johnson_tester(resetOut, clkOut, out);
+module count_down_johnson_structural_tester(resetOut, clkOut, out);
 
   /* Defining the output/input ports */
   output reg resetOut, clkOut;
