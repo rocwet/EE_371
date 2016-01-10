@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'init_clk'
+Slack : -3.220
+TNS   : -31.083
+
+Type  : Slow 1100mV 85C Model Setup 'tBase[24]'
+Slack : -1.067
+TNS   : -1.067
+
+Type  : Slow 1100mV 85C Model Setup 'DFlipFlop:time_flip|q'
+Slack : -0.727
+TNS   : -4.105
+
+Type  : Slow 1100mV 85C Model Hold 'tBase[24]'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'init_clk'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'DFlipFlop:time_flip|q'
+Slack : 0.482
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'init_clk'
+Slack : -0.419
+TNS   : -13.269
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : -0.394
+TNS   : -3.584
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'tBase[24]'
+Slack : -0.394
+TNS   : -0.523
+
+Type  : Slow 1100mV 0C Model Setup 'init_clk'
+Slack : -3.237
+TNS   : -32.734
+
+Type  : Slow 1100mV 0C Model Setup 'tBase[24]'
+Slack : -1.176
+TNS   : -1.176
+
+Type  : Slow 1100mV 0C Model Setup 'DFlipFlop:time_flip|q'
+Slack : -0.746
+TNS   : -4.135
+
+Type  : Slow 1100mV 0C Model Hold 'init_clk'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'tBase[24]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'DFlipFlop:time_flip|q'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'init_clk'
+Slack : -0.417
+TNS   : -14.241
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : -0.394
+TNS   : -3.665
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'tBase[24]'
+Slack : -0.394
+TNS   : -0.514
+
+Type  : Fast 1100mV 85C Model Setup 'init_clk'
+Slack : -2.358
+TNS   : -9.326
+
+Type  : Fast 1100mV 85C Model Setup 'tBase[24]'
+Slack : -0.524
+TNS   : -0.524
+
+Type  : Fast 1100mV 85C Model Setup 'DFlipFlop:time_flip|q'
+Slack : -0.150
+TNS   : -0.659
+
+Type  : Fast 1100mV 85C Model Hold 'tBase[24]'
+Slack : -0.127
+TNS   : -0.127
+
+Type  : Fast 1100mV 85C Model Hold 'init_clk'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'DFlipFlop:time_flip|q'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'init_clk'
+Slack : -0.420
+TNS   : -2.560
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'tBase[24]'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'init_clk'
+Slack : -1.986
+TNS   : -8.334
+
+Type  : Fast 1100mV 0C Model Setup 'tBase[24]'
+Slack : -0.515
+TNS   : -0.515
+
+Type  : Fast 1100mV 0C Model Setup 'DFlipFlop:time_flip|q'
+Slack : -0.110
+TNS   : -0.384
+
+Type  : Fast 1100mV 0C Model Hold 'tBase[24]'
+Slack : -0.121
+TNS   : -0.121
+
+Type  : Fast 1100mV 0C Model Hold 'init_clk'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'DFlipFlop:time_flip|q'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'init_clk'
+Slack : -0.407
+TNS   : -2.504
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'tBase[24]'
+Slack : 0.139
+TNS   : 0.000
+
+------------------------------------------------------------
