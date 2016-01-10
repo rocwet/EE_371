@@ -11,23 +11,21 @@ input     |reset      |1 bit    |The reset signal (active low).
 input     |clk        |1 bit    |The clock for the system.
 
 */
-module count_down(out, reset, clk);
+module count_down_dataflow(out, reset, clk);
 
   /* Defining the output/input ports */
   output [3:0] out;
   input reset, clk;
   
   /* Wires for connection */
-  reg [3:0] new_out;
+  wire [3:0] new_out;
   wire [3:0] not_out;
 
   /* Operation for each stage for the new state */
   assign new_out[0] = ~out[0];
-  assign new_out[1] = ~(out[1] ^ out[0]);
-  assign new_out[2] = (not_out[2] & not_out[1] & not_out[0]) +
-                      (out[3] & (out[2] + out[1] + out[0]));
-  assign new_out[3] = (not_out[3] & not_out[2] & not_out[1] & not_out[0]) +
-                      (out[3] & (out[2] + out[1] + out[0]));
+  assign new_out[1] = (out[1] ~^ out[0]);
+  assign new_out[2] = (~out[2] & ~out[1] & ~out[0]) + (out[2] & (out[1] + out[0]));
+  assign new_out[3] = (~out[3] & ~out[2] & ~out[1] & ~out[0]) + (out[3] & (out[2] + out[1] + out[0]));
   
   /* D_Flip_Flop for new state to present stage assignment */
   D_FF stage0 (.q(out[0]), .qBar(not_out[0]), .D(new_out[0]), .clk(clk), .rst(reset));
@@ -75,21 +73,21 @@ endmodule
 /*
 The count_down_testBench module tests the count_down module. 
 */
-module count_down_testBench;
+module count_down_dataflow_testBench;
 
   /* Wires for testing */
   wire [3:0] out;
   wire reset, clk;
   
   /* declare instance of count_down module */
-  count_down dut (.out(out), .reset(reset), .clk(clk));
+  count_down_dataflow dut (.out(out), .reset(reset), .clk(clk));
   
   /* declare instance of test module */
-  count_down_tester aTest (reset, clk, out);
+  count_down_dataflow_tester aTest (reset, clk, out);
   
   /* file for gtkwave */
   initial begin
-    $dumpfile("count_down_0.vcd");
+    $dumpfile("____gtkwave____DATAFLOW____.vcd");
     $dumpvars(1, dut);
   end
   
@@ -105,7 +103,7 @@ output    |resetOut   |1 bit    |The generated reset signal for testing.
 output    |clkOut     |1 bit    |The genereated clk signal for testing.
 input     |out        |4 bit    |The output signal used for printing to stdout.
  */
-module count_down_tester(resetOut, clkOut, out);
+module count_down_dataflow_tester(resetOut, clkOut, out);
 
   /* Defining the output/input ports */
   output reg resetOut, clkOut;

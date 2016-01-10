@@ -21,22 +21,22 @@ module count_down_johnson(out, reset, clk);
 	wire [3:0] not_out;
   
   /* Next state logic */
-	DFlipFlop d0 (.q(out[0]), .qBar(), .D(not_out[3]), .clk(clk), .rst(reset));
-	DFlipFlop d1 (.q(out[1]), .qBar(), .D(out[0]), .clk(clk), .rst(reset));
-	DFlipFlop d2 (.q(out[2]), .qBar(), .D(out[1]), .clk(clk), .rst(reset));
-	DFlipFlop d3 (.q(out[3]), .qBar(not_out[3]), .D(out[2]), .clk(clk), .rst(reset));
+	DFlipFlop d0 (.q(out[3]), .qBar(), .D(not_out[3]), .clk(clk), .rst(reset));
+	DFlipFlop d1 (.q(out[2]), .qBar(), .D(out[0]), .clk(clk), .rst(reset));
+	DFlipFlop d2 (.q(out[1]), .qBar(), .D(out[1]), .clk(clk), .rst(reset));
+	DFlipFlop d3 (.q(out[0]), .qBar(not_out[3]), .D(out[2]), .clk(clk), .rst(reset));
 	
-	always@ (negedge reset or posedge clk)
-	begin
-		if (!reset) out <= 4'b0000;
-		else 
-		begin
-			out[3] <= ~out[0];
-			out[2] <= out[3];
-			out[1] <= out[2];
-			out[0] <= out[1];
-		end
-	end
+	// always@ (negedge reset or posedge clk)
+	// begin
+		// if (!reset) out <= 4'b0000;
+		// else 
+		// begin
+			// out[3] <= ~out[0];
+			// out[2] <= out[3];
+			// out[1] <= out[2];
+			// out[0] <= out[1];
+		// end
+	// end
 	
 endmodule
 
@@ -58,5 +58,73 @@ module DFlipFlop(q, qBar, D, clk, rst);
   else
     q = D;
   end
+  
+endmodule
+
+/* ---------------------------------------------------------------------------------------- */
+/* ------------------------------------TEST BENCH------------------------------------------ */
+/* ---------------------------------------------------------------------------------------- */
+
+/*
+The count_down_testBench module tests the count_down module. 
+*/
+module count_down_johnson_testBench;
+
+  /* Wires for testing */
+  wire [3:0] out;
+  wire reset, clk;
+  
+  /* declare instance of count_down module */
+  count_down_johnson dut (.out(out), .reset(reset), .clk(clk));
+  
+  /* declare instance of test module */
+  count_down_johnson_tester aTest (reset, clk, out);
+  
+  /* file for gtkwave */
+  initial begin
+    $dumpfile("____gtkwave.vcd");
+    $dumpvars(1, dut);
+  end
+  
+endmodule
+
+/*
+The count_down_tester module generates the reset and clock signals for testing.
+It also prints out, on stdout, the output and inputs of the count_down module.
+
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |resetOut   |1 bit    |The generated reset signal for testing.
+output    |clkOut     |1 bit    |The genereated clk signal for testing.
+input     |out        |4 bit    |The output signal used for printing to stdout.
+ */
+module count_down_johnson_tester(resetOut, clkOut, out);
+
+  /* Defining the output/input ports */
+  output reg resetOut, clkOut;
+  input [3:0] out;
+  
+  /* Delay Constant */
+  parameter DELAY = 10;
+  integer i;
+  
+  /* Display information of ports to stdout */
+  initial begin
+    $display("\t resetOut \t clkOut \t out ");
+    $monitor("\t %b\t %b \t %d", resetOut, clkOut, out);
+  end
+  
+  /* Set values for ports w/ delays*/
+  initial begin
+    clkOut = 0;
+    resetOut = 0; 
+    #100 resetOut = 1; 
+    for(i = 0; i < 26; i = i + 1) begin
+      #DELAY clkOut = 1;
+      #DELAY clkOut = 0;
+    end
+    resetOut = 0; 
+    #100 $finish;
+	end
   
 endmodule
