@@ -1,9 +1,0 @@
-module test(out, in);
-	output out;
-	input in;
-	
-	assign in = out;
-
-
-
-endmodule 

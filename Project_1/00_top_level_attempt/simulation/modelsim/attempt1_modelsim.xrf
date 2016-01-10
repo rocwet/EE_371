@@ -1,7 +1,0 @@
-vendor_name = ModelSim
-source_file = 1, C:/Users/dennyly/Documents/GitHub/EE_371/Project_1/00_top_level_attempt/test.v
-source_file = 1, C:/Users/dennyly/Documents/GitHub/EE_371/Project_1/00_top_level_attempt/db/attempt1.cbx.xml
-design_name = test
-instance = comp, \out~output\, out~output, test, 1
-instance = comp, \in1~input\, in1~input, test, 1
-instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, test, 1

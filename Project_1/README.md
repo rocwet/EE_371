@@ -7,9 +7,9 @@ program to have a basic introduction to the C programming language.
 
 | Name              | Role          |
 | -------------     | ------------- |
-| Minh Khuu         | Content Cell  |
-| Denny Ly          | Content Cell  |
-| Ruchira Kulkarni  | Content Cell  |
+| Minh Khuu         | Member        |
+| Denny Ly          | Member        |
+| Ruchira Kulkarni  | Member        |
 
 ## Contents
 In our project we will implement a 4-bit down counter in Verilog in four ways:
@@ -20,3 +20,7 @@ In our project we will implement a 4-bit down counter in Verilog in four ways:
 4. Structurally
 
 Finally, we will also write a C program that behaves like a calculator.
+
+## Notes
+
+The 
