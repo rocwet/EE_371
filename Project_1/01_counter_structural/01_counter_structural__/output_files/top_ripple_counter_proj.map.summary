@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Jan 11 18:24:40 2016
-Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Analysis & Synthesis Status : Successful - Tue Jan 12 12:36:37 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
 Revision Name : top_ripple_counter_proj
 Top-level Entity Name : top_ripple_counter
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 591
+Total registers : 581
 Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 11,264

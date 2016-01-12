@@ -1,6 +1,6 @@
 EDA Netlist Writer report for top_count_down_dataflow
-Mon Jan 11 18:36:38 2016
-Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+Tue Jan 12 12:48:55 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jan 11 18:36:38 2016 ;
+; EDA Netlist Writer Status ; Successful - Tue Jan 12 12:48:55 2016 ;
 ; Revision Name             ; top_count_down_dataflow               ;
 ; Top-level Entity Name     ; top_count_down_dataflow               ;
 ; Family                    ; Cyclone V                             ;
@@ -72,7 +72,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Generated Files                                                                                                                                   ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/dennyly/Documents/GitHub/EE_371/Project_1/02_counter_dataflow/___count_down_dataflow_proj/simulation/modelsim/top_count_down_dataflow.vo ;
+; C:/Users/ruchik2/Documents/GitHub/EE_371/Project_1/02_counter_dataflow/___count_down_dataflow_proj/simulation/modelsim/top_count_down_dataflow.vo ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -81,14 +81,14 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Mon Jan 11 18:36:36 2016
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Tue Jan 12 12:48:53 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off top_count_down_dataflow -c top_count_down_dataflow
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
-Info (204019): Generated file top_count_down_dataflow.vo in folder "C:/Users/dennyly/Documents/GitHub/EE_371/Project_1/02_counter_dataflow/___count_down_dataflow_proj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_count_down_dataflow.vo in folder "C:/Users/ruchik2/Documents/GitHub/EE_371/Project_1/02_counter_dataflow/___count_down_dataflow_proj/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 644 megabytes
-    Info: Processing ended: Mon Jan 11 18:36:38 2016
+    Info: Peak virtual memory: 689 megabytes
+    Info: Processing ended: Tue Jan 12 12:48:55 2016
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

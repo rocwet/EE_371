@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at count_down_schem_new.v(133): always construct contains both blocking and non-blocking assignments

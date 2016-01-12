@@ -118,3 +118,23 @@ assign	SYNTHESIZED_WIRE_8 = SYNTHESIZED_WIRE_10 | SYNTHESIZED_WIRE_9;
 
 
 endmodule
+
+module DFlipFlop(q, qBar, D, clk, rst);
+
+  /* Defining the output/input ports */
+  input D, clk, rst;
+  output q, qBar;
+  reg q;
+  
+  /* retrieve inverted output */
+  not n1 (qBar, q);
+  
+  /* update the present state with the next state */
+  always@ (negedge rst or posedge clk) begin
+  if(!rst)
+    q <= 0;
+  else
+    q = D;
+  end
+  
+endmodule

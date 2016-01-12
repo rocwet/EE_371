@@ -1,14 +1,5 @@
 |top_johnson_counter_behavioural
-SW[0] => SW[0].IN2
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
+KEY => KEY.IN2
 LED[0] <= count_down_johnson_behavioural:johnson_please.out
 LED[1] <= count_down_johnson_behavioural:johnson_please.out
 LED[2] <= count_down_johnson_behavioural:johnson_please.out
