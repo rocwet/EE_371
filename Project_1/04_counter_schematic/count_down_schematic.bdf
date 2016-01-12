@@ -801,10 +801,6 @@ agreement for further details.
 	(pt 240 352)
 )
 (connector
-	(pt 184 72)
-	(pt 208 72)
-)
-(connector
 	(pt 208 72)
 	(pt 480 72)
 )
@@ -977,14 +973,6 @@ agreement for further details.
 	(pt 1264 288)
 )
 (connector
-	(pt 184 120)
-	(pt 216 120)
-)
-(connector
-	(pt 184 168)
-	(pt 224 168)
-)
-(connector
 	(pt 168 400)
 	(pt 472 400)
 )
@@ -1043,10 +1031,6 @@ agreement for further details.
 (connector
 	(pt 232 216)
 	(pt 232 320)
-)
-(connector
-	(pt 184 216)
-	(pt 232 216)
 )
 (connector
 	(pt 232 216)
@@ -1178,9 +1162,6 @@ agreement for further details.
 )
 (junction (pt 264 192))
 (junction (pt 256 144))
-(junction (pt 224 168))
-(junction (pt 216 120))
-(junction (pt 208 72))
 (junction (pt 272 240))
 (junction (pt 536 96))
 (junction (pt 472 400))
@@ -1198,7 +1179,6 @@ agreement for further details.
 (junction (pt 1000 400))
 (junction (pt 1048 424))
 (junction (pt 920 240))
-(junction (pt 232 216))
 (junction (pt 1216 240))
 (junction (pt 1048 192))
 (junction (pt 840 144))

@@ -1,0 +1,56 @@
+|top_ripple_counter
+KEY => KEY.IN1
+LED[0] <= ripple_counter:ripple_please.out
+LED[1] <= ripple_counter:ripple_please.out
+LED[2] <= ripple_counter:ripple_please.out
+LED[3] <= ripple_counter:ripple_please.out
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= <GND>
+LED[9] <= <GND>
+init_clk => init_clk.IN1
+
+
+|top_ripple_counter|ripple_counter:ripple_please
+out[0] <= out[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= DFlipFlop:flip3.q
+reset => reset.IN4
+clk => clk.IN1
+
+
+|top_ripple_counter|ripple_counter:ripple_please|DFlipFlop:flip3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|top_ripple_counter|ripple_counter:ripple_please|DFlipFlop:flip2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|top_ripple_counter|ripple_counter:ripple_please|DFlipFlop:flip1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|top_ripple_counter|ripple_counter:ripple_please|DFlipFlop:flip0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+

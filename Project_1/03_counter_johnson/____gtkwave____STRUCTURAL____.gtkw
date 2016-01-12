@@ -1,20 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
-[*] Sun Jan 10 01:07:31 2016
+[*] Mon Jan 11 22:58:54 2016
 [*]
-[dumpfile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____STRUCTURAL____.vcd"
-[dumpfile_mtime] "Sun Jan 10 01:02:12 2016"
-[dumpfile_size] 1172
-[savefile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____STRUCTURAL____.gtkw"
+[dumpfile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____STRUCTURAL____.vcd"
+[dumpfile_mtime] "Mon Jan 11 22:54:58 2016"
+[dumpfile_size] 1621
+[savefile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____STRUCTURAL____.gtkw"
 [timestart] 0
-[size] 1160 681
-[pos] -14 23
-*-7.463520 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1204 403
+[pos] 215 39
+*-7.709370 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] count_down_johnson_testBench.
 [sst_width] 197
 [signals_width] 94
 [sst_expanded] 1
-[sst_vpaned_height] 181
+[sst_vpaned_height] 84
 @800023
 count_down_johnson_testBench.dut.out[3:0]
 @29
