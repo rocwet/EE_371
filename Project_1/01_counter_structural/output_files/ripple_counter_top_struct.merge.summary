@@ -1,13 +1,13 @@
-Partition Merge Status : Successful - Mon Jan 11 13:06:29 2016
+Partition Merge Status : Successful - Mon Jan 11 16:05:20 2016
 Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
 Revision Name : ripple_counter_top_struct
 Top-level Entity Name : top_ripple_counter
 Family : Cyclone V
-Logic utilization (in ALMs) : 476 / 32,070 ( 1 % )
-Total registers : 684
+Logic utilization (in ALMs) : 625 / 32,070 ( 2 % )
+Total registers : 821
 Total pins : 21 / 457 ( 5 % )
 Total virtual pins : 0
-Total block memory bits : 20,480 / 4,065,280 ( < 1 % )
+Total block memory bits : 2,621,440 / 4,065,280 ( 64 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
