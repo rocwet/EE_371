@@ -1,0 +1,27 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00953b30 .scope module, "AndOr" "AndOr" 2 2;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 2 "AandB"
+    .port_info 1 /OUTPUT 2 "AorB"
+    .port_info 2 /INPUT 2 "A"
+    .port_info 3 /INPUT 2 "B"
+o024d1c74 .functor BUFZ 2, C4<zz>; HiZ drive
+o024d1cbc .functor BUFZ 2, C4<zz>; HiZ drive
+L_00955888 .functor AND 2, o024d1c74, o024d1cbc, C4<11>, C4<11>;
+L_009558d0 .functor OR 2, o024d1c74, o024d1cbc, C4<00>, C4<00>;
+v00953c00_0 .net "A", 1 0, o024d1c74;  0 drivers
+v00955780_0 .net "AandB", 1 0, L_00955888;  1 drivers
+v009557d8_0 .net "AorB", 1 0, L_009558d0;  1 drivers
+v00955830_0 .net "B", 1 0, o024d1cbc;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    ".\andOr0.v";
