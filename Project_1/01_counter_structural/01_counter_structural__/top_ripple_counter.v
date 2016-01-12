@@ -12,5 +12,5 @@ module top_ripple_counter(KEY, LED, init_clk);
 
 	ripple_counter ripple_please (.out(LED[3:0]), .reset(KEY), .clk(slow_clk));
 	
-	//ripple_counter ripple_please (.out(LED[3:0]), .reset(KEY), .clk(init_clk));
+//	ripple_counter ripple_please (.out(LED[3:0]), .reset(KEY), .clk(init_clk));
 endmodule 

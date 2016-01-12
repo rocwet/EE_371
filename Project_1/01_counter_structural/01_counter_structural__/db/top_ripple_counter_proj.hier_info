@@ -1,5 +1,5 @@
 |top_ripple_counter
-KEY => KEY.IN1
+KEY => KEY.IN2
 LED[0] <= ripple_counter:ripple_please.out
 LED[1] <= ripple_counter:ripple_please.out
 LED[2] <= ripple_counter:ripple_please.out
@@ -10,7 +10,41 @@ LED[6] <= <GND>
 LED[7] <= <GND>
 LED[8] <= <GND>
 LED[9] <= <GND>
-init_clk => init_clk.IN1
+init_clk => tBase[0].CLK
+init_clk => tBase[1].CLK
+init_clk => tBase[2].CLK
+init_clk => tBase[3].CLK
+init_clk => tBase[4].CLK
+init_clk => tBase[5].CLK
+init_clk => tBase[6].CLK
+init_clk => tBase[7].CLK
+init_clk => tBase[8].CLK
+init_clk => tBase[9].CLK
+init_clk => tBase[10].CLK
+init_clk => tBase[11].CLK
+init_clk => tBase[12].CLK
+init_clk => tBase[13].CLK
+init_clk => tBase[14].CLK
+init_clk => tBase[15].CLK
+init_clk => tBase[16].CLK
+init_clk => tBase[17].CLK
+init_clk => tBase[18].CLK
+init_clk => tBase[19].CLK
+init_clk => tBase[20].CLK
+init_clk => tBase[21].CLK
+init_clk => tBase[22].CLK
+init_clk => tBase[23].CLK
+init_clk => tBase[24].CLK
+init_clk => tBase[25].CLK
+init_clk => tBase[26].CLK
+
+
+|top_ripple_counter|DFlipFlop:time_flip
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
 
 
 |top_ripple_counter|ripple_counter:ripple_please

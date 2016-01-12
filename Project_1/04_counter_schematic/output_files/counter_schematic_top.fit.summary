@@ -1,0 +1,19 @@
+Fitter Status : Successful - Mon Jan 11 19:57:48 2016
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : counter_schematic_top
+Top-level Entity Name : top_counter_down_schematic_struct
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 301 / 32,070 ( < 1 % )
+Total registers : 594
+Total pins : 12 / 457 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 11,264 / 4,065,280 ( < 1 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

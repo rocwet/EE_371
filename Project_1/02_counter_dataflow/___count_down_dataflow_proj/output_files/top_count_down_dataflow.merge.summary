@@ -1,0 +1,17 @@
+Partition Merge Status : Successful - Mon Jan 11 18:35:04 2016
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : top_count_down_dataflow
+Top-level Entity Name : top_count_down_dataflow
+Family : Cyclone V
+Logic utilization (in ALMs) : 354 / 32,070 ( 1 % )
+Total registers : 568
+Total pins : 12 / 457 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 11,264 / 4,065,280 ( < 1 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

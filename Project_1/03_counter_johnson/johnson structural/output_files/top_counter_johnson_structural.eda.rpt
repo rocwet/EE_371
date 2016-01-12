@@ -1,6 +1,6 @@
 EDA Netlist Writer report for top_counter_johnson_structural
-Sat Jan 09 18:14:38 2016
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+Mon Jan 11 18:51:55 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Jan 09 18:14:38 2016 ;
+; EDA Netlist Writer Status ; Successful - Mon Jan 11 18:51:55 2016 ;
 ; Revision Name             ; top_counter_johnson_structural        ;
 ; Top-level Entity Name     ; top_counter_johnson_struct            ;
 ; Family                    ; Cyclone V                             ;
@@ -81,15 +81,15 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Sat Jan 09 18:14:37 2016
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+    Info: Processing started: Mon Jan 11 18:51:53 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off top_counter_johnson_structural -c top_counter_johnson_structural
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
 Info (204019): Generated file top_counter_johnson_structural.vo in folder "C:/Users/dennyly/Documents/GitHub/EE_371/Project_1/03_counter_johnson/johnson structural/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 672 megabytes
-    Info: Processing ended: Sat Jan 09 18:14:38 2016
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 644 megabytes
+    Info: Processing ended: Mon Jan 11 18:51:55 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

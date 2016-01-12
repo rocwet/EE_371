@@ -1,0 +1,30 @@
+|top_counter_down_schematic_struct
+KEY => KEY.IN1
+LED[0] <= count_down_schem_new:schematic_please.B0
+LED[1] <= count_down_schem_new:schematic_please.B1
+LED[2] <= count_down_schem_new:schematic_please.B2
+LED[3] <= count_down_schem_new:schematic_please.B3
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= <GND>
+LED[9] <= <GND>
+init_clk => init_clk.IN1
+
+
+|top_counter_down_schematic_struct|count_down_schem_new:schematic_please
+Clock => DFF_inst3.CLK
+Clock => SYNTHESIZED_WIRE_7.CLK
+Clock => SYNTHESIZED_WIRE_10.CLK
+Clock => SYNTHESIZED_WIRE_9.CLK
+Reset => DFF_inst3.ACLR
+Reset => SYNTHESIZED_WIRE_7.ACLR
+Reset => SYNTHESIZED_WIRE_10.ACLR
+Reset => SYNTHESIZED_WIRE_9.ACLR
+B3 <= DFF_inst3.DB_MAX_OUTPUT_PORT_TYPE
+B2 <= SYNTHESIZED_WIRE_7.DB_MAX_OUTPUT_PORT_TYPE
+B1 <= SYNTHESIZED_WIRE_10.DB_MAX_OUTPUT_PORT_TYPE
+B0 <= SYNTHESIZED_WIRE_9.DB_MAX_OUTPUT_PORT_TYPE
+
+
