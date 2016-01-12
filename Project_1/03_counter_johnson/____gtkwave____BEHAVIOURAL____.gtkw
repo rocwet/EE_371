@@ -1,20 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
-[*] Sun Jan 10 01:12:54 2016
+[*] Mon Jan 11 22:58:34 2016
 [*]
-[dumpfile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____BEHAVIOURAL____.vcd"
-[dumpfile_mtime] "Sun Jan 10 01:10:43 2016"
-[dumpfile_size] 1100
-[savefile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____BEHAVIOURAL____.gtkw"
+[dumpfile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____BEHAVIOURAL____.vcd"
+[dumpfile_mtime] "Mon Jan 11 22:53:20 2016"
+[dumpfile_size] 1535
+[savefile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\03_counter_johnson\____gtkwave____BEHAVIOURAL____.gtkw"
 [timestart] 0
-[size] 1165 684
-[pos] -163 -73
-*-7.454717 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1203 400
+[pos] -1 -1
+*-7.711047 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] count_down_johnson_behavioural_testBench.
 [sst_width] 197
 [signals_width] 94
 [sst_expanded] 1
-[sst_vpaned_height] 182
+[sst_vpaned_height] 84
 @800023
 count_down_johnson_behavioural_testBench.dut.out[3:0]
 @29

@@ -90,36 +90,39 @@ output    |clkOut     |1 bit    |The genereated clk signal for testing.
 input     |out        |4 bit    |The output signal used for printing to stdout.
  */
 module ripple_counter_tester(resetOut, clkOut, out);
-	/* Defining the output/input ports */
-	output reg resetOut, clkOut;
-	input[3:0] out;
-
-	/* Delay Constant */
-	parameter DELAY = 10;
-	integer i;
-
-	/* Display information of ports to stdout */
-	initial begin
-		$display("\t resetOut \t clkOut \t out ");
-		$monitor("\t %b\t\t %b \t\t %d", resetOut, clkOut, out);
-	end
-	  
-	parameter clk_period = 1000;
-	initial clkOut = 1;
-	always begin
-		#(clk_period/2);
-		clkOut = ~clkOut;
-	end 
-
-	initial begin
-		resetOut <= 0; 			@(posedge clkOut);
-		resetOut <= 1; 			@(posedge clkOut);
-		
-		for(i = 0; i < 26; i = i + 1) begin
-			@(posedge clkOut);
-		end
-		
-		$finish;
+	
+  /* Defining the output/input ports */
+  output reg resetOut, clkOut;
+  input [3:0] out;
+  
+  /* Delay Constant */
+  parameter DELAY = 10;
+  integer i;
+  
+  /* Display information of ports to stdout */
+  initial begin
+    $display("\t resetOut \t clkOut \t out ");
+    $monitor("\t %b\t %b \t %d", resetOut, clkOut, out);
+  end
+  
+  /* Update Clock */
+  always begin
+    #DELAY clkOut = 1;
+    #DELAY clkOut = 0;
+  end
+  
+  /* Set values for ports w/ delays*/
+  initial begin
+    clkOut = 0;
+    resetOut = 0; #100;
+    for(i = 0; i < 50; i = i + 1) begin
+      resetOut = 1; #DELAY;
+    end
+    resetOut = 0; #100;
+    for(i = 0; i < 20; i = i + 1) begin
+      resetOut = 1; #DELAY;
+    end
+    $finish;
 	end
   
 endmodule 

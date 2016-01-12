@@ -112,17 +112,24 @@ module count_down_johnson_structural_tester(resetOut, clkOut, out);
     $monitor("\t %b\t %b \t %d", resetOut, clkOut, out);
   end
   
+  /* Update Clock */
+  always begin
+    #DELAY clkOut = 1;
+    #DELAY clkOut = 0;
+  end
+  
   /* Set values for ports w/ delays*/
   initial begin
     clkOut = 0;
-    resetOut = 0; 
-    #100 resetOut = 1; 
-    for(i = 0; i < 26; i = i + 1) begin
-      #DELAY clkOut = 1;
-      #DELAY clkOut = 0;
+    resetOut = 0; #100;
+    for(i = 0; i < 50; i = i + 1) begin
+      resetOut = 1; #DELAY;
     end
-    resetOut = 0; 
-    #100 $finish;
+    resetOut = 0; #100;
+    for(i = 0; i < 20; i = i + 1) begin
+      resetOut = 1; #DELAY;
+    end
+    $finish;
 	end
   
 endmodule

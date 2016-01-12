@@ -1,21 +1,21 @@
 [*]
 [*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
-[*] Sun Jan 10 01:28:24 2016
+[*] Mon Jan 11 22:57:57 2016
 [*]
-[dumpfile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\01_counter_structural\____gtkwave____STRUCTURAL____.vcd"
-[dumpfile_mtime] "Sun Jan 10 01:26:49 2016"
-[dumpfile_size] 1472
-[savefile] "C:\Users\minhkhuu\Documents\GitHub\EE_371\Project_1\01_counter_structural\____gtkwave____STRUCTURAL____.gtkw"
+[dumpfile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\01_counter_structural\____gtkwave____STRUCTURAL____.vcd"
+[dumpfile_mtime] "Mon Jan 11 22:51:36 2016"
+[dumpfile_size] 1864
+[savefile] "C:\Users\minh.khuu\Documents\GitHub\EE_371\Project_1\01_counter_structural\____gtkwave____STRUCTURAL____.gtkw"
 [timestart] 0
-[size] 1163 682
-[pos] 72 163
-*-12.737567 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1205 400
+[pos] 215 153
+*-7.707695 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] ripple_counter_testbench.
 [sst_width] 197
 [signals_width] 94
 [sst_expanded] 1
-[sst_vpaned_height] 182
-@800023
+[sst_vpaned_height] 83
+@800025
 ripple_counter_testbench.dut.out[3:0]
 @29
 (0)ripple_counter_testbench.dut.out[3:0]
