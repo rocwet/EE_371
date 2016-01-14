@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 904 936 1072 952)
+	(rect 208 88 376 104)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Clock" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,7 +38,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 904 976 1072 992)
+	(rect 648 136 816 152)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Reset" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
@@ -651,32 +651,12 @@ agreement for further details.
 	(pt 376 -24)
 )
 (connector
-	(pt 1072 944)
-	(pt 144 944)
-)
-(connector
-	(pt 1080 984)
-	(pt 1080 48)
-)
-(connector
-	(pt 1072 984)
-	(pt 1080 984)
-)
-(connector
 	(pt 144 -480)
 	(pt 144 -312)
 )
 (connector
 	(pt 144 -312)
 	(pt 144 -160)
-)
-(connector
-	(pt 144 -160)
-	(pt 144 -8)
-)
-(connector
-	(pt 144 -8)
-	(pt 144 944)
 )
 (connector
 	(pt 184 48)
@@ -765,6 +745,34 @@ agreement for further details.
 (connector
 	(pt 448 -328)
 	(pt 528 -328)
+)
+(connector
+	(pt 448 96)
+	(pt 376 96)
+)
+(connector
+	(pt 144 168)
+	(pt 448 168)
+)
+(connector
+	(pt 448 96)
+	(pt 448 168)
+)
+(connector
+	(pt 144 -160)
+	(pt 144 -8)
+)
+(connector
+	(pt 144 -8)
+	(pt 144 168)
+)
+(connector
+	(pt 1080 48)
+	(pt 1080 144)
+)
+(connector
+	(pt 1080 144)
+	(pt 816 144)
 )
 (junction (pt 144 -8))
 (junction (pt 144 -312))
