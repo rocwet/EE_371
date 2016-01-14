@@ -15,18 +15,24 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 14.0.0 Build 200 06/17/2014 SJ Web Edition"
-// CREATED		"Thu Jan 14 00:25:45 2016"
+// CREATED		"Thu Jan 14 02:22:23 2016"
 
 module count_down_schematic(
 	CLOCK,
 	RESET,
-	out
+	out0,
+	out1,
+	out2,
+	out3
 );
 
 
 input wire	CLOCK;
 input wire	RESET;
-output reg	[3:0] out;
+output wire	out0;
+output wire	out1;
+output wire	out2;
+output wire	out3;
 
 wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_1;
@@ -46,6 +52,10 @@ wire	SYNTHESIZED_WIRE_13;
 wire	SYNTHESIZED_WIRE_14;
 wire	SYNTHESIZED_WIRE_15;
 
+assign	out0 = SYNTHESIZED_WIRE_22;
+assign	out1 = SYNTHESIZED_WIRE_21;
+assign	out2 = SYNTHESIZED_WIRE_23;
+assign	out3 = SYNTHESIZED_WIRE_17;
 
 
 

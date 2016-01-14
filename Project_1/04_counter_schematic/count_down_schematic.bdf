@@ -56,7 +56,7 @@ agreement for further details.
 	(output)
 	(rect 0 232 176 248)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "out[0]" (rect 5 0 33 12)(font "Arial" ))
+	(text "out0" (rect 5 0 27 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -73,7 +73,7 @@ agreement for further details.
 	(output)
 	(rect 0 184 176 200)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "out[1]" (rect 5 0 33 12)(font "Arial" ))
+	(text "out1" (rect 5 0 27 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -90,7 +90,7 @@ agreement for further details.
 	(output)
 	(rect 0 136 176 152)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "out[2]" (rect 5 0 33 12)(font "Arial" ))
+	(text "out2" (rect 5 0 27 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -107,7 +107,7 @@ agreement for further details.
 	(output)
 	(rect 0 88 176 104)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "out[3]" (rect 5 0 33 12)(font "Arial" ))
+	(text "out3" (rect 5 0 27 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
