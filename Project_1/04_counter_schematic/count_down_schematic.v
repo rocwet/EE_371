@@ -14,8 +14,8 @@
 // agreement for further details.
 
 // PROGRAM		"Quartus II 64-Bit"
-// VERSION		"Version 14.1.0 Build 186 12/03/2014 SJ Full Version"
-// CREATED		"Mon Jan 11 18:59:21 2016"
+// VERSION		"Version 14.0.0 Build 200 06/17/2014 SJ Web Edition"
+// CREATED		"Thu Jan 14 00:25:45 2016"
 
 module count_down_schematic(
 	CLOCK,
