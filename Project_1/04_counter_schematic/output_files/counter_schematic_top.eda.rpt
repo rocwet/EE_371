@@ -1,6 +1,6 @@
 EDA Netlist Writer report for counter_schematic_top
-Thu Jan 14 00:50:45 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Thu Jan 14 18:43:17 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jan 14 00:50:45 2016 ;
+; EDA Netlist Writer Status ; Successful - Thu Jan 14 18:43:17 2016 ;
 ; Revision Name             ; counter_schematic_top                 ;
-; Top-level Entity Name     ; top_counter_down_schematic_struct     ;
+; Top-level Entity Name     ; count_down_schematic                  ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -51,8 +51,7 @@ agreement for further details.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; Off                       ;
-; Time scale                                                                                        ; 1 ps                      ;
+; Generate netlist for functional simulation only                                                   ; On                        ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -72,7 +71,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------+
 ; Generated Files                                                                                                    ;
 +--------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Denny/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/modelsim/counter_schematic_top.vo ;
+; C:/Users/minhkhuu/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//counter_schematic_top.vo ;
 +--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -81,15 +80,28 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Thu Jan 14 00:50:42 2016
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off counter_schematic_top -c counter_schematic_top
-Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
-Info (204019): Generated file counter_schematic_top.vo in folder "C:/Users/Denny/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 553 megabytes
-    Info: Processing ended: Thu Jan 14 00:50:45 2016
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus II License Agreement,
+    Info: the Altera MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Altera and sold by Altera or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Thu Jan 14 18:43:15 2016
+Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/minhkhuu/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim/ counter_schematic_top -c counter_schematic_top
+Info (204019): Generated file counter_schematic_top.vo in folder "C:/Users/minhkhuu/Documents/GitHub/EE_371/Project_1/04_counter_schematic/simulation/qsim//" for EDA simulation tool
+Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 629 megabytes
+    Info: Processing ended: Thu Jan 14 18:43:17 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
