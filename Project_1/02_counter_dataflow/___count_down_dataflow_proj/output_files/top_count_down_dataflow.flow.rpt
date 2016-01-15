@@ -1,6 +1,6 @@
 Flow report for top_count_down_dataflow
-Thu Jan 14 00:18:20 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Thu Jan 14 19:30:04 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -38,29 +38,29 @@ agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Thu Jan 14 00:18:20 2016      ;
-; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
-; Revision Name                   ; top_count_down_dataflow                    ;
-; Top-level Entity Name           ; top_count_down_dataflow                    ;
-; Family                          ; Cyclone V                                  ;
-; Device                          ; 5CSEMA5F31C6                               ;
-; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 268 / 32,070 ( < 1 % )                     ;
-; Total registers                 ; 489                                        ;
-; Total pins                      ; 12 / 457 ( 3 % )                           ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 5,120 / 4,065,280 ( < 1 % )                ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI PMA TX Serializers   ; 0                                          ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
-+---------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Thu Jan 14 19:30:04 2016       ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
+; Revision Name                   ; top_count_down_dataflow                     ;
+; Top-level Entity Name           ; top_count_down_dataflow                     ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 492                                         ;
+; Total pins                      ; 12                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 5,120                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------+
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 01/14/2016 00:15:56     ;
+; Start date & time ; 01/14/2016 19:29:43     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; top_count_down_dataflow ;
 +-------------------+-------------------------+
@@ -79,10 +79,9 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 145851856345784.145275935506172                            ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 109952949373001.145282858307396                            ; --            ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                  ; <None>        ; --          ; --               ;
-; ENABLE_OCT_DONE                     ; Off                                                        ; On            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                         ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --          ; --               ;
@@ -119,41 +118,29 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 646 MB              ; 00:00:09                           ;
-; Fitter                    ; 00:01:25     ; 1.2                     ; 2908 MB             ; 00:02:37                           ;
-; Assembler                 ; 00:00:14     ; 1.0                     ; 663 MB              ; 00:00:14                           ;
-; TimeQuest Timing Analyzer ; 00:00:17     ; 1.1                     ; 941 MB              ; 00:00:16                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 539 MB              ; 00:00:02                           ;
-; Total                     ; 00:02:09     ; --                      ; --                  ; 00:03:18                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 777 MB              ; 00:00:41                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:41                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; EE-361pc17       ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off top_count_down_dataflow -c top_count_down_dataflow
-quartus_fit --read_settings_files=off --write_settings_files=off top_count_down_dataflow -c top_count_down_dataflow
-quartus_asm --read_settings_files=off --write_settings_files=off top_count_down_dataflow -c top_count_down_dataflow
-quartus_sta top_count_down_dataflow -c top_count_down_dataflow
-quartus_eda --read_settings_files=off --write_settings_files=off top_count_down_dataflow -c top_count_down_dataflow
 
 
 
