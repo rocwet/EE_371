@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Jan 13 23:52:58 2016
-Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Fitter Status : Successful - Thu Jan 14 15:35:24 2016
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
 Revision Name : top_ripple_counter_proj
 Top-level Entity Name : top_ripple_counter
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 266 / 32,070 ( < 1 % )
-Total registers : 498
+Logic utilization (in ALMs) : 294 / 32,070 ( < 1 % )
+Total registers : 541
 Total pins : 12 / 457 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 5,120 / 4,065,280 ( < 1 % )

@@ -1,0 +1,74 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00e7ec78 .scope module, "testBench" "testBench" 2 3;
+ .timescale 0 0;
+v025d2a10_0 .net "X", 1 0, v00e7ed48_0;  1 drivers
+v00e73a08_0 .net "XandY", 1 0, L_00e73b10;  1 drivers
+v00e73a60_0 .net "XorY", 1 0, L_00e73b58;  1 drivers
+v00e73ab8_0 .net "Y", 1 0, v00e74f30_0;  1 drivers
+S_00e74e60 .scope module, "aTester" "Tester" 2 12, 2 24 0, S_00e7ec78;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 2 "xOut"
+    .port_info 1 /OUTPUT 2 "yOut"
+    .port_info 2 /INPUT 2 "XandYin"
+    .port_info 3 /INPUT 2 "XorYin"
+P_025d2340 .param/l "stimDelay" 0 2 29, +C4<00000000000000000000000000010100>;
+v00e7ef90_0 .net "XandYin", 1 0, L_00e73b10;  alias, 1 drivers
+v00e7df70_0 .net "XorYin", 1 0, L_00e73b58;  alias, 1 drivers
+v00e7ed48_0 .var "xOut", 1 0;
+v00e74f30_0 .var "yOut", 1 0;
+S_025d2890 .scope module, "myAndOr" "AndOr" 2 9, 3 2 0, S_00e7ec78;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 2 "AandB"
+    .port_info 1 /OUTPUT 2 "AorB"
+    .port_info 2 /INPUT 2 "A"
+    .port_info 3 /INPUT 2 "B"
+L_00e73b10 .functor AND 2, v00e7ed48_0, v00e74f30_0, C4<11>, C4<11>;
+L_00e73b58 .functor OR 2, v00e7ed48_0, v00e74f30_0, C4<00>, C4<00>;
+v00e74f88_0 .net "A", 1 0, v00e7ed48_0;  alias, 1 drivers
+v00e74fe0_0 .net "AandB", 1 0, L_00e73b10;  alias, 1 drivers
+v025d2960_0 .net "AorB", 1 0, L_00e73b58;  alias, 1 drivers
+v025d29b8_0 .net "B", 1 0, v00e74f30_0;  alias, 1 drivers
+    .scope S_00e74e60;
+T_0 ;
+    %vpi_call 2 33 "$display", "\011\011 xOut yOut \011 XandYin XorYin \011 Time " {0 0 0};
+    %vpi_call 2 34 "$monitor", "\011\011 %b\011 %b \011 %b \011 %b", v00e7ed48_0, v00e74f30_0, v00e7ef90_0, v00e7df70_0, $time {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00e74e60;
+T_1 ;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v00e7ed48_0, 0, 2;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v00e74f30_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v00e7ed48_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v00e74f30_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v00e7ed48_0, 0, 2;
+    %delay 40, 0;
+    %vpi_call 2 46 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_00e7ec78;
+T_2 ;
+    %vpi_call 2 18 "$dumpfile", "andor0.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000001, S_025d2890 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\andorTop0.v";
+    "./andOr0.v";
