@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Minh\Documents\GitHub\EE_371\Project_1\__report__\diagrams\simulation\qsim
+vjohnson_down
+Z1 IgdfPZiM@i[bF6n[Rni9YJ3
+Z2 VamX4GKUC<@m_d]SIhXlmA3
+Z3 dC:\Users\Minh\Documents\GitHub\EE_371\Project_1\__report__\diagrams\simulation\qsim
+Z4 w1452807187
+Z5 8diagram.vo
+Z6 Fdiagram.vo
+L0 32
+Z7 OV;L;10.1e;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 ilAE7M@849:8ekQPHdez[0
+Z10 !s108 1452807190.158000
+Z11 !s107 diagram.vo|
+Z12 !s90 -work|work|diagram.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vjohnson_down_vlg_check_tst
+Z13 IDUGZ97Q;=4CO^HZ_8oITL2
+Z14 V2Q0QT7TYgIEKdSQ2RVKNh3
+R3
+Z15 w1452807184
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 60
+R7
+r1
+31
+Z18 !s108 1452807190.262000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+R8
+Z21 !s100 PHI:7k_Rg585Wm:WXPnJF2
+!i10b 1
+!s85 0
+!s101 -O0
+vjohnson_down_vlg_sample_tst
+Z22 I7i01XbWU<[4zQ;THkDoZ02
+Z23 Vo@W:C@Jg6@zdaUH`MZa=>1
+R3
+R15
+R16
+R17
+L0 30
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z24 !s100 =Qm<XIF9YPSR]MIOU72Vb3
+!i10b 1
+!s85 0
+!s101 -O0
+vjohnson_down_vlg_vec_tst
+Z25 IECS`dQ^bh;3TbEZmD;64A2
+Z26 VOQG>NM0?3@3:8R:ko;:_b2
+R3
+R15
+R16
+R17
+Z27 L0 236
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z28 !s100 1zY_KA3D0f`E`3UF4g1@U3
+!i10b 1
+!s85 0
+!s101 -O0
+vripple_down
+Z29 !s100 iASVBL><61jHVi18`iKa23
+Z30 IhH]c_X[HUJW5d1>oDKF8?1
+Z31 VU]HS2KGC?`lP4RSiE:1HB3
+R3
+Z32 w1452810822
+R5
+R6
+L0 32
+R7
+r1
+31
+R12
+R8
+!i10b 1
+!s85 0
+Z33 !s108 1452810824.965000
+R11
+!s101 -O0
+vripple_down_vlg_check_tst
+!i10b 1
+!s100 KL]2?:3R?LL>:2;K_QgnV3
+IS1bAM]9mXmcnM=Ec9XYld0
+Z34 Vo3bBd5>:E_V7;dMOeY0YA2
+R3
+Z35 w1452810819
+Z36 8Waveform3.vwf.vt
+Z37 FWaveform3.vwf.vt
+L0 60
+R7
+r1
+!s85 0
+31
+Z38 !s108 1452810825.065000
+Z39 !s107 Waveform3.vwf.vt|
+Z40 !s90 -work|work|Waveform3.vwf.vt|
+!s101 -O0
+R8
+vripple_down_vlg_sample_tst
+!i10b 1
+!s100 3cadCc9N[PcBoQd@Zk<oT0
+IX^4ZK@DbR^CfFcEMH6mcR1
+Z41 VVn<0cYBC:Z7H[Ab<7CYWg2
+R3
+R35
+R36
+R37
+L0 30
+R7
+r1
+!s85 0
+31
+R38
+R39
+R40
+!s101 -O0
+R8
+vripple_down_vlg_vec_tst
+!i10b 1
+!s100 I_cIHGll3TI=82;MVgNfB2
+I0bKTGPbU;Y;9I8nz]Az6T0
+Z42 V_RZEQKZ7K?o_B>Ye>gON`3
+R3
+R35
+R36
+R37
+R27
+R7
+r1
+!s85 0
+31
+R38
+R39
+R40
+!s101 -O0
+R8

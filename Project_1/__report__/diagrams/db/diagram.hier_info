@@ -1,0 +1,12 @@
+|ripple_down
+Q_3 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+RESET => inst.ACLR
+RESET => inst1.ACLR
+RESET => inst2.ACLR
+RESET => inst3.ACLR
+CLOCK => inst3.CLK
+Q_2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q_1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q_0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
