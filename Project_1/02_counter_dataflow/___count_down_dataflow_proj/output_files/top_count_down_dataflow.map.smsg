@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at count_down_dataflow.v(60): always construct contains both blocking and non-blocking assignments
