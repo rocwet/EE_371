@@ -22,5 +22,5 @@ In our project we will implement a 4-bit down counter in Verilog in four ways:
 Finally, we will also write a C program that converts currency.
 
 ## Notes
-BOARD MODEL NUMBER
+Board Model Number
 * 5CSEMA5F31C6
