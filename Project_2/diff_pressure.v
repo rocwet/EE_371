@@ -1,10 +1,13 @@
+`include "DFlipFlop.v"
+
 module diff_pressure (diff, key, clk, reset);
 	input clk, key, reset;
 	output reg diff;
 	
-	reg[1:0] PS, NS;
+	wire PS;
+	reg NS;
 	
-	parameter UNDER = 1'b1, OVER = 1'b0;
+	parameter UNDER = 1'b0, OVER = 1'b1;
 	
   always @(posedge clk) begin
     case (PS) 
@@ -25,14 +28,7 @@ module diff_pressure (diff, key, clk, reset);
     endcase
   end
 	
-	always @(posedge clk) begin
-		if (reset) begin
-			PS <= UNDER;
-		end
-		else begin
-			PS <= NS;
-		end
-	end
+	DFlipFlop flip0 (.q(PS), .qBar(), .D(NS), .clk(clk), .rst(reset));
 	
 	always @(*) begin
 		diff = PS;

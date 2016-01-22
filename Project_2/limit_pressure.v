@@ -1,21 +1,24 @@
+`include "DFlipFlop.v"
+
 module limit_pressure (limit, key, clk, reset);
 	input clk, key, reset;
 	output reg limit;
 	
-	reg[1:0] PS, NS;
+	wire PS;
+	reg NS;
 	
-	parameter WITHIN = 1'b1, BEYOND = 1'b0;
+	parameter WITHIN = 1'b0, BEYOND = 1'b1;
 	
   always @(posedge clk) begin
     case (PS) 
     
-      /* DIFFERENTIAL PRESSURE IS <= 0.1 atm */
+      /* WITHIN LIMIT OF 16000 PSI and 13 PSI */
       WITHIN: begin
         if (key) NS = BEYOND;
         else NS = WITHIN;
       end
       
-			/* DIFFERENTIAL PRESSURE IS > 0.1 atm */
+			/* BEYOND LIMIT OF 16000 PSI and 13 PSI */
       BEYOND: begin
         if (key) NS = WITHIN;
         else NS = BEYOND;
@@ -25,16 +28,9 @@ module limit_pressure (limit, key, clk, reset);
     endcase
   end
 	
-	always @(posedge clk) begin
-		if (reset) begin
-			PS <= WITHIN;
-		end
-		else begin
-			PS <= NS;
-		end
-	end
+	DFlipFlop flip0 (.q(PS), .qBar(), .D(NS), .clk(clk), .rst(reset));
 	
-	always @(*) begin
+	always @(PS) begin
 		limit = PS;
 	end
 	
