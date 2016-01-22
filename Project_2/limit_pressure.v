@@ -1,24 +1,24 @@
-module diff_pressure (diff, key, clk, reset);
+module limit_pressure (limit, key, clk, reset);
 	input clk, key, reset;
-	output reg diff;
+	output reg limit;
 	
 	reg[1:0] PS, NS;
 	
-	parameter UNDER = 1'b1, OVER = 1'b0;
+	parameter WITHIN = 1'b1, BEYOND = 1'b0;
 	
   always @(posedge clk) begin
     case (PS) 
     
       /* DIFFERENTIAL PRESSURE IS <= 0.1 atm */
-      UNDER: begin
-        if (key) NS = OVER;
-        else NS = UNDER;
+      WITHIN: begin
+        if (key) NS = BEYOND;
+        else NS = WITHIN;
       end
       
 			/* DIFFERENTIAL PRESSURE IS > 0.1 atm */
-      OVER: begin
-        if (key) NS = UNDER;
-        else NS = OVER;
+      BEYOND: begin
+        if (key) NS = WITHIN;
+        else NS = BEYOND;
       end
 		
       default: NS = 1'bx;
@@ -27,7 +27,7 @@ module diff_pressure (diff, key, clk, reset);
 	
 	always @(posedge clk) begin
 		if (reset) begin
-			PS <= UNDER;
+			PS <= WITHIN;
 		end
 		else begin
 			PS <= NS;
@@ -35,7 +35,7 @@ module diff_pressure (diff, key, clk, reset);
 	end
 	
 	always @(*) begin
-		diff = PS;
+		limit = PS;
 	end
 	
 endmodule
