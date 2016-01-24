@@ -1,4 +1,3 @@
-`include "DFlipFlop.v"
 
 module diff_pressure (diff, key, clk, reset);
 	input clk, key, reset;
