@@ -35,3 +35,91 @@ module limit_pressure (limit, key, clk, reset);
 	end
 	
 endmodule
+
+/* ---------------------------------------------------------------------------------------- */
+/* ------------------------------------TEST BENCH------------------------------------------ */
+/* ---------------------------------------------------------------------------------------- */
+
+/*
+The limit_pressure_testBench module tests the limit_pressure module. 
+*/
+module limit_pressure_testBench;
+
+  /* Wires for testing */
+  wire limit, key, clk, reset;
+  
+  /* declare instance of limit_pressure module */
+  limit_pressure dut (.limit(limit), .key(key), .clk(clk), .reset(reset));
+  
+  /* declare instance of test module */
+  limit_pressure_tester aTest (.resetOut(reset), .clkOut(clk), .keyOut(key), .limit(limit));
+  
+  /* file for gtkwave */
+  initial begin
+    $dumpfile("____gtkwave____LIMIT_PRESSURE____.vcd");
+    $dumpvars(1, dut);
+  end
+  
+endmodule
+
+/*
+The limit_pressure_tester module generates the reset, clock, and key signals for testing.
+It also prints limit, on stdout, the output and inputs of the limit_pressure module.
+
+TYPE      |NAME       |WIDTH    |DESCRIPTION       
+-----------------------------------------------------------------------------------
+output    |resetOut   |1 bit    |The generated reset signal for testing.
+output    |clkOut     |1 bit    |The genereated clk signal for testing.
+output    |keyOut     |1 bit    |The genereated key signal for testing.
+input     |limit      |1 bit    |The output signal used for printing to stdout.
+ */
+module limit_pressure_tester(resetOut, clkOut, keyOut, limit);
+
+  /* Defining the output/input ports */
+  output reg resetOut, clkOut, keyOut;
+  input limit;
+  
+  /* Delay Constant */
+  parameter DELAY = 10;
+  integer i;
+  
+  /* Display information of ports to stdout */
+  initial begin
+    $display("\t resetOut \t clkOut \t keyOut \t out ");
+    $monitor("\t %b \t\t %b \t\t %b \t\t %d", resetOut, clkOut, keyOut, limit);
+  end
+  
+  /* Update Clock */
+  always begin
+    #DELAY clkOut = 1;
+    #DELAY clkOut = 0;
+  end
+  
+  /* Set values for ports w/ delays*/
+  initial begin
+    clkOut = 0;
+    resetOut = 1; #40;
+		resetOut = 0;
+		keyOut = 0; #20;
+    for(i = 0; i < 4; i = i + 1) begin
+			keyOut = 0; #DELAY; #DELAY; #DELAY; #DELAY;
+			keyOut = 1; #DELAY; #DELAY; #DELAY; #DELAY;
+    end
+		for(i = 0; i < 4; i = i + 1) begin
+      keyOut = 1; #DELAY; #DELAY;
+			keyOut = 0; #DELAY; #DELAY;
+    end
+    resetOut = 1; #40;
+    for(i = 0; i < 4; i = i + 1) begin
+      keyOut = 0; #DELAY; #DELAY;
+			keyOut = 1; #DELAY; #DELAY;
+    end
+		resetOut = 0; #40;
+    for(i = 0; i < 4; i = i + 1) begin
+      keyOut = 0; #DELAY; #DELAY;
+			keyOut = 1; #DELAY; #DELAY;
+    end
+    $finish;
+	end
+  
+endmodule
