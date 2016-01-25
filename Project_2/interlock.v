@@ -45,10 +45,14 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
         if (count[25]) begin 
           NS = WAIT_FILL;
           count <= 27'h0;
+			 LED[9] <= 1'b0;
         end
         else begin
           NS = PREP;
           count <= count + 27'h1;
+			 if (count[22]) begin   // blink the LED for a while 
+				LED[9] <= count[22];
+			 end 
         end
 			end
 		
@@ -67,10 +71,14 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 				if (count[25]) begin
 					NS = WAIT_OPORT_OPEN;
 					count <= 27'h0;
+					LED[8] <= 1'b0;
 				end
 				else begin
 					NS = FILLING;
 					count <= count + 27'h1;
+					if (count[22]) begin   // blink the LED for a while 
+						LED[8] <= count[22];
+					end
 				end
       end
       
@@ -109,10 +117,14 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 				if (count[25]) begin
 					NS = WAIT_IPORT_OPEN;
 					count <= 27'h0;
+					LED[7] <= 1'b0;
 				end
 				else begin
 					NS = DRAINING;
 					count <= count + 27'h1;
+					if (count[22]) begin   // blink the LED for a while 
+						LED[7] <= count[22];
+					end
 				end
       end
 			
@@ -139,6 +151,11 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 			/* ERROR CONDITION */
       ERROR: begin
 				NS = ERROR;
+				HEX0 = ~7'b1111001;
+				HEX1 = ~7'b1110111;
+				HEX2 = ~7'b1110111;
+				HEX3 = ~7'b0111111;
+				HEX4 = ~7'b1110111;
       end
     
       default: NS = 4'hx;
