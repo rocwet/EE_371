@@ -1,10 +1,9 @@
-`include "DFlipFlop.v"
 
-module interlock (LED, HEX, arrive, depart, fill, drain, iport, oport, reset, clock);
+module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill, drain, iport, oport, reset, clock);
   
   /* define the output and input ports */
   output[9:0] LED;
-	output[5:0][6:0] HEX;
+  output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
   input arrive, depart, fill, drain, iport, oport;
   input reset, clock;
   
