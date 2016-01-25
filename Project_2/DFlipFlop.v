@@ -20,7 +20,7 @@ module DFlipFlop(q, qBar, D, clk, rst);
   not n1 (qBar, q);
   
   /* update the present state with the next state */
-  always@ (negedge rst or posedge clk) begin
+  always@ (posedge rst or posedge clk) begin
   if(rst)
     q <= 0;
   else

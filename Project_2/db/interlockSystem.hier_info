@@ -1,0 +1,275 @@
+|DE1_SoC
+CLOCK_50 => tBase[0].CLK
+CLOCK_50 => tBase[1].CLK
+CLOCK_50 => tBase[2].CLK
+CLOCK_50 => tBase[3].CLK
+CLOCK_50 => tBase[4].CLK
+CLOCK_50 => tBase[5].CLK
+CLOCK_50 => tBase[6].CLK
+CLOCK_50 => tBase[7].CLK
+CLOCK_50 => tBase[8].CLK
+CLOCK_50 => tBase[9].CLK
+CLOCK_50 => tBase[10].CLK
+CLOCK_50 => tBase[11].CLK
+CLOCK_50 => tBase[12].CLK
+CLOCK_50 => tBase[13].CLK
+CLOCK_50 => tBase[14].CLK
+CLOCK_50 => tBase[15].CLK
+CLOCK_50 => tBase[16].CLK
+CLOCK_50 => tBase[17].CLK
+CLOCK_50 => tBase[18].CLK
+CLOCK_50 => tBase[19].CLK
+CLOCK_50 => tBase[20].CLK
+CLOCK_50 => tBase[21].CLK
+CLOCK_50 => tBase[22].CLK
+CLOCK_50 => tBase[23].CLK
+CLOCK_50 => tBase[24].CLK
+CLOCK_50 => tBase[25].CLK
+CLOCK_50 => tBase[26].CLK
+HEX0[0] << interlock:i_lock.HEX0
+HEX0[1] << interlock:i_lock.HEX0
+HEX0[2] << interlock:i_lock.HEX0
+HEX0[3] << interlock:i_lock.HEX0
+HEX0[4] << interlock:i_lock.HEX0
+HEX0[5] << interlock:i_lock.HEX0
+HEX0[6] << interlock:i_lock.HEX0
+HEX1[0] << interlock:i_lock.HEX1
+HEX1[1] << interlock:i_lock.HEX1
+HEX1[2] << interlock:i_lock.HEX1
+HEX1[3] << interlock:i_lock.HEX1
+HEX1[4] << interlock:i_lock.HEX1
+HEX1[5] << interlock:i_lock.HEX1
+HEX1[6] << interlock:i_lock.HEX1
+HEX2[0] << interlock:i_lock.HEX2
+HEX2[1] << interlock:i_lock.HEX2
+HEX2[2] << interlock:i_lock.HEX2
+HEX2[3] << interlock:i_lock.HEX2
+HEX2[4] << interlock:i_lock.HEX2
+HEX2[5] << interlock:i_lock.HEX2
+HEX2[6] << interlock:i_lock.HEX2
+HEX3[0] << interlock:i_lock.HEX3
+HEX3[1] << interlock:i_lock.HEX3
+HEX3[2] << interlock:i_lock.HEX3
+HEX3[3] << interlock:i_lock.HEX3
+HEX3[4] << interlock:i_lock.HEX3
+HEX3[5] << interlock:i_lock.HEX3
+HEX3[6] << interlock:i_lock.HEX3
+HEX4[0] << interlock:i_lock.HEX4
+HEX4[1] << interlock:i_lock.HEX4
+HEX4[2] << interlock:i_lock.HEX4
+HEX4[3] << interlock:i_lock.HEX4
+HEX4[4] << interlock:i_lock.HEX4
+HEX4[5] << interlock:i_lock.HEX4
+HEX4[6] << interlock:i_lock.HEX4
+HEX5[0] << interlock:i_lock.HEX5
+HEX5[1] << interlock:i_lock.HEX5
+HEX5[2] << interlock:i_lock.HEX5
+HEX5[3] << interlock:i_lock.HEX5
+HEX5[4] << interlock:i_lock.HEX5
+HEX5[5] << interlock:i_lock.HEX5
+HEX5[6] << interlock:i_lock.HEX5
+KEY[0] => resetReal.IN2
+KEY[1] => _.IN1
+KEY[2] => _.IN1
+KEY[3] => _.IN1
+LEDR[0] << interlock:i_lock.LED
+LEDR[1] << interlock:i_lock.LED
+LEDR[2] << interlock:i_lock.LED
+LEDR[3] << interlock:i_lock.LED
+LEDR[4] << interlock:i_lock.LED
+LEDR[5] << interlock:i_lock.LED
+LEDR[6] << interlock:i_lock.LED
+LEDR[7] << interlock:i_lock.LED
+LEDR[8] << interlock:i_lock.LED
+LEDR[9] << interlock:i_lock.LED
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|DE1_SoC|DFlipFlop:time_flip
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock
+LED[0] <= <GND>
+LED[1] <= <GND>
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= LED[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= diff_pressure:diff0.diff
+LED[7] <= limit_pressure:limit0.limit
+LED[8] <= <GND>
+LED[9] <= <GND>
+HEX0[0] <= HEX0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= HEX1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= HEX1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= HEX1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= HEX1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= HEX1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= HEX1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= HEX2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= HEX2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= HEX2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= HEX2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= HEX2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= HEX2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= HEX2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= HEX3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[1] <= HEX3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[2] <= HEX3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[3] <= HEX3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[4] <= HEX3[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[5] <= HEX3[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[6] <= HEX3[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[0] <= HEX4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] <= HEX4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] <= HEX4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= HEX4[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= HEX4[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] <= HEX4[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= HEX4[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[0] <= HEX5[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[1] <= HEX5[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[2] <= HEX5[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[3] <= HEX5[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[4] <= HEX5[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[5] <= HEX5[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[6] <= HEX5[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+arrive => NS.OUTPUTSELECT
+arrive => NS.OUTPUTSELECT
+arrive => Mux3.IN12
+arrive => always1.IN1
+depart => always1.IN0
+depart => always1.IN0
+fill => always1.IN1
+drain => Mux3.IN13
+iport => NS.DATAA
+iport => NS.DATAA
+iport => NS.DATAA
+iport => Mux0.IN12
+iport => always1.IN1
+iport => NS.DATAA
+oport => NS.DATAA
+oport => Mux0.IN13
+oport => Mux3.IN14
+oport => NS.DATAA
+oport => Mux1.IN13
+oport => Mux2.IN11
+select => select.IN1
+testPressure => testPressure.IN2
+reset => reset.IN6
+clock => clock.IN6
+
+
+|DE1_SoC|interlock:i_lock|diff_pressure:diff0
+diff <= DFlipFlop:flip0.q
+key => key.IN1
+SW => always0.IN1
+SW => always0.IN1
+clk => clk.IN2
+reset => reset.IN2
+
+
+|DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH
+BT <= btn.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+reset => reset.IN2
+button => Mux2.IN3
+button => Mux3.IN2
+button => Mux3.IN3
+
+
+|DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|diff_pressure:diff0|DFlipFlop:flip0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|limit_pressure:limit0
+limit <= DFlipFlop:flip0.q
+key => always0.IN0
+key => always0.IN0
+SW => always0.IN1
+SW => always0.IN1
+clk => clk.IN1
+reset => reset.IN1
+
+
+|DE1_SoC|interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|DFlipFlop:flip0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|DFlipFlop:flip1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|DFlipFlop:flip2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|DFlipFlop:flip3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+

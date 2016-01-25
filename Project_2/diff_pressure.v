@@ -1,26 +1,30 @@
-
-module diff_pressure (diff, key, clk, reset);
-	input clk, key, reset;
+module diff_pressure (diff, key, SW, clk, reset);
+	input clk, key, reset, SW;
 	output reg diff;
 	
 	wire PS;
 	reg NS;
-	
+  wire singleKey;
+  
+  inputHandler inputH (.BT(singleKey), .Clock(clk), .reset(reset), .button(key));
+
 	parameter UNDER = 1'b0, OVER = 1'b1;
 	
-  always @(posedge clk) begin
+  always @(singleKey or reset) begin    
     case (PS) 
     
       /* DIFFERENTIAL PRESSURE IS <= 0.1 atm */
       UNDER: begin
-        if (key) NS = OVER;
-        else NS = UNDER;
+        if (singleKey && SW) NS = OVER;
+//        else if (reset) NS = UNDER;
+        else NS = PS;
       end
       
 			/* DIFFERENTIAL PRESSURE IS > 0.1 atm */
       OVER: begin
-        if (key) NS = UNDER;
-        else NS = OVER;
+        if (singleKey && SW) NS = UNDER;
+//        else if (reset) NS = UNDER;
+        else NS = PS;
       end
 		
       default: NS = 1'bx;
@@ -29,7 +33,7 @@ module diff_pressure (diff, key, clk, reset);
 	
 	DFlipFlop flip0 (.q(PS), .qBar(), .D(NS), .clk(clk), .rst(reset));
 	
-	always @(*) begin
+	always @(PS) begin
 		diff = PS;
 	end
 	
@@ -45,13 +49,13 @@ The diff_pressure_testBench module tests the diff_pressure module.
 module diff_pressure_testBench;
 
   /* Wires for testing */
-  wire diff, key, clk, reset;
+  wire diff, key, SW, clk, reset;
   
   /* declare instance of diff_pressure module */
-  diff_pressure dut (.diff(diff), .key(key), .clk(clk), .reset(reset));
+  diff_pressure dut (.diff(diff), .key(key), .SW(SW), .clk(clk), .reset(reset));
   
   /* declare instance of test module */
-  diff_pressure_tester aTest (.resetOut(reset), .clkOut(clk), .keyOut(key), .diff(diff));
+  diff_pressure_tester aTest (.resetOut(reset), .clkOut(clk), .SWOut(SW), .keyOut(key), .diff(diff));
   
   /* file for gtkwave */
   initial begin
@@ -72,10 +76,10 @@ output    |clkOut     |1 bit    |The genereated clk signal for testing.
 output    |keyOut     |1 bit    |The genereated key signal for testing.
 input     |diff       |1 bit    |The output signal used for printing to stdout.
  */
-module diff_pressure_tester(resetOut, clkOut, keyOut, diff);
+module diff_pressure_tester(resetOut, clkOut, SWOut, keyOut, diff);
 
   /* Defining the output/input ports */
-  output reg resetOut, clkOut, keyOut;
+  output reg resetOut, clkOut, SWOut, keyOut;
   input diff;
   
   /* Delay Constant */
@@ -84,8 +88,8 @@ module diff_pressure_tester(resetOut, clkOut, keyOut, diff);
   
   /* Display information of ports to stdout */
   initial begin
-    $display("\t resetOut \t clkOut \t keyOut \t out ");
-    $monitor("\t %b \t %b \t %b \t %d", resetOut, clkOut, keyOut, diff);
+    $display("\t resetOut \t clkOut \t keyOut \t SWOut \t out ");
+    $monitor("\t %b \t\t %b \t\t %b \t\t %b \t\t %d", resetOut, clkOut, keyOut, SWOut, diff);
   end
   
   /* Update Clock */
@@ -98,6 +102,7 @@ module diff_pressure_tester(resetOut, clkOut, keyOut, diff);
   initial begin
     clkOut = 0;
     resetOut = 1; #40;
+		SWOut = 0;
 		resetOut = 0;
 		keyOut = 0; #20;
     for(i = 0; i < 4; i = i + 1) begin

@@ -1,6 +1,5 @@
-
-module limit_pressure (limit, key, clk, reset);
-	input clk, key, reset;
+module limit_pressure (limit, key, SW, clk, reset);
+	input clk, key, SW, reset;
 	output reg limit;
 	
 	wire PS;
@@ -8,24 +7,27 @@ module limit_pressure (limit, key, clk, reset);
 	
 	parameter WITHIN = 1'b0, BEYOND = 1'b1;
 	
-  always @(posedge clk) begin
+  always @(posedge key or posedge reset) begin
     case (PS) 
     
       /* WITHIN LIMIT OF 16000 PSI and 13 PSI */
       WITHIN: begin
-        if (key) NS = BEYOND;
+        if (key && SW) NS = BEYOND;
+        else if (reset) NS = WITHIN;
         else NS = WITHIN;
       end
       
 			/* BEYOND LIMIT OF 16000 PSI and 13 PSI */
       BEYOND: begin
-        if (key) NS = WITHIN;
+        if (key && SW) NS = WITHIN;
+        else if (reset) NS = WITHIN;
         else NS = BEYOND;
       end
 		
       default: NS = 1'bx;
     endcase
   end
+  
 	
 	DFlipFlop flip0 (.q(PS), .qBar(), .D(NS), .clk(clk), .rst(reset));
 	
@@ -45,13 +47,13 @@ The limit_pressure_testBench module tests the limit_pressure module.
 module limit_pressure_testBench;
 
   /* Wires for testing */
-  wire limit, key, clk, reset;
+  wire limit, key, SW, clk, reset;
   
   /* declare instance of limit_pressure module */
-  limit_pressure dut (.limit(limit), .key(key), .clk(clk), .reset(reset));
+  limit_pressure dut (.limit(limit), .key(key), .SW(SW), .clk(clk), .reset(reset));
   
   /* declare instance of test module */
-  limit_pressure_tester aTest (.resetOut(reset), .clkOut(clk), .keyOut(key), .limit(limit));
+  limit_pressure_tester aTest (.resetOut(reset), .clkOut(clk), .SWOut(SW), .keyOut(key), .limit(limit));
   
   /* file for gtkwave */
   initial begin
@@ -72,10 +74,10 @@ output    |clkOut     |1 bit    |The genereated clk signal for testing.
 output    |keyOut     |1 bit    |The genereated key signal for testing.
 input     |limit      |1 bit    |The output signal used for printing to stdout.
  */
-module limit_pressure_tester(resetOut, clkOut, keyOut, limit);
+module limit_pressure_tester(resetOut, clkOut, SWOut, keyOut, limit);
 
   /* Defining the output/input ports */
-  output reg resetOut, clkOut, keyOut;
+  output reg resetOut, clkOut, keyOut, SWOut;
   input limit;
   
   /* Delay Constant */
@@ -84,8 +86,8 @@ module limit_pressure_tester(resetOut, clkOut, keyOut, limit);
   
   /* Display information of ports to stdout */
   initial begin
-    $display("\t resetOut \t clkOut \t keyOut \t out ");
-    $monitor("\t %b \t\t %b \t\t %b \t\t %d", resetOut, clkOut, keyOut, limit);
+    $display("\t resetOut \t clkOut \t keyOut \t SWOut \t out ");
+    $monitor("\t %b \t\t %b \t\t %b \t\t %b \t\t %d", resetOut, clkOut, keyOut, limit);
   end
   
   /* Update Clock */
@@ -99,6 +101,7 @@ module limit_pressure_tester(resetOut, clkOut, keyOut, limit);
     clkOut = 0;
     resetOut = 1; #40;
 		resetOut = 0;
+		SWOut = 1;
 		keyOut = 0; #20;
     for(i = 0; i < 4; i = i + 1) begin
 			keyOut = 0; #DELAY; #DELAY; #DELAY; #DELAY;
