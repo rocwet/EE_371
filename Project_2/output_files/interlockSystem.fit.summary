@@ -1,5 +1,5 @@
-Fitter Status : Successful - Mon Jan 25 18:37:54 2016
-Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Fitter Status : Successful - Tue Jan 26 12:41:09 2016
+Quartus Prime Version : 15.1.1 Build 189 12/02/2015 SJ Standard Edition
 Revision Name : interlockSystem
 Top-level Entity Name : DE1_SoC
 Family : Cyclone V
@@ -10,6 +10,7 @@ Total registers : 39
 Total pins : 67 / 457 ( 15 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
+Total RAM Blocks : 0 / 397 ( 0 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

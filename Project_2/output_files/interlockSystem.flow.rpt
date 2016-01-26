@@ -1,6 +1,6 @@
 Flow report for interlockSystem
-Mon Jan 25 18:38:20 2016
-Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+Tue Jan 26 12:41:38 2016
+Quartus Prime Version 15.1.1 Build 189 12/02/2015 SJ Standard Edition
 
 
 ---------------------
@@ -21,14 +21,14 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus II License Agreement,
+Subscription Agreement, the Altera Quartus Prime License Agreement,
 the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
@@ -38,29 +38,29 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jan 25 18:38:20 2016       ;
-; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
-; Revision Name                   ; interlockSystem                             ;
-; Top-level Entity Name           ; DE1_SoC                                     ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 58 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 39                                          ;
-; Total pins                      ; 67 / 457 ( 15 % )                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Tue Jan 26 12:41:38 2016           ;
+; Quartus Prime Version           ; 15.1.1 Build 189 12/02/2015 SJ Standard Edition ;
+; Revision Name                   ; interlockSystem                                 ;
+; Top-level Entity Name           ; DE1_SoC                                         ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA5F31C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 58 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 39                                              ;
+; Total pins                      ; 67 / 457 ( 15 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/25/2016 18:37:02 ;
+; Start date & time ; 01/26/2016 12:40:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; interlockSystem     ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+-----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value   ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+-----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 109952949588069.145377582201164       ; --              ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273440549380963.145384081407916       ; --              ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --              ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>          ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --              ; --          ; --             ;
@@ -99,12 +99,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 731 MB              ; 00:00:21                           ;
-; Fitter                    ; 00:00:40     ; 1.7                     ; 2666 MB             ; 00:01:01                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 716 MB              ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 1034 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 630 MB              ; 00:00:01                           ;
-; Total                     ; 00:01:10     ; --                      ; --                  ; 00:01:41                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 894 MB              ; 00:00:24                           ;
+; Fitter                    ; 00:00:39     ; 1.0                     ; 2659 MB             ; 00:01:06                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 886 MB              ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 1175 MB             ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 793 MB              ; 00:00:01                           ;
+; Total                     ; 00:01:12     ; --                      ; --                  ; 00:01:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,11 +113,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; ee-361pc15       ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; ee-361pc15       ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; ee-361pc15       ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; ee-361pc15       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; ee-361pc15       ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; EE-137PC28       ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; EE-137PC28       ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; EE-137PC28       ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EE-137PC28       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; EE-137PC28       ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

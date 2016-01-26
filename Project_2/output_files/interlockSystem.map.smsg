@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at DFlipFlop.v(23): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DFlipFlop.v(23): always construct contains both blocking and non-blocking assignments File: C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/DFlipFlop.v Line: 23
