@@ -103,78 +103,81 @@ rst => q~reg0.ACLR
 
 
 |DE1_SoC|interlock:i_lock
-LED[0] <= <GND>
-LED[1] <= <GND>
-LED[2] <= <GND>
-LED[3] <= <GND>
-LED[4] <= <GND>
-LED[5] <= LED[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-LED[6] <= diff_pressure:diff0.diff
-LED[7] <= limit_pressure:limit0.limit
-LED[8] <= <GND>
-LED[9] <= <GND>
-HEX0[0] <= HEX0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[1] <= HEX0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] <= HEX0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] <= HEX0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] <= HEX0[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] <= HEX0[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[6] <= HEX0[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[0] <= HEX1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[1] <= HEX1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[2] <= HEX1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[3] <= HEX1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[4] <= HEX1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[5] <= HEX1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX1[6] <= HEX1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[0] <= HEX2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[1] <= HEX2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[2] <= HEX2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[3] <= HEX2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[4] <= HEX2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[5] <= HEX2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX2[6] <= HEX2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[0] <= HEX3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[1] <= HEX3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[2] <= HEX3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[3] <= HEX3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[4] <= HEX3[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[5] <= HEX3[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX3[6] <= HEX3[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[0] <= HEX4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[1] <= HEX4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[2] <= HEX4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[3] <= HEX4[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[4] <= HEX4[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[5] <= HEX4[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX4[6] <= HEX4[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[0] <= HEX5[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[1] <= HEX5[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[2] <= HEX5[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[3] <= HEX5[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[4] <= HEX5[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[5] <= HEX5[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[6] <= HEX5[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[0] <= LED[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= LED[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= diff_pressure:diff0.diff
+LED[9] <= limit_pressure:limit0.limit
+HEX0[0] <= Mux36.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux35.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= Mux29.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= Mux28.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[1] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[2] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[3] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[4] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[5] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[6] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[0] <= <VCC>
+HEX4[1] <= <VCC>
+HEX4[2] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[0] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[2] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[3] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[5] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
 arrive => NS.OUTPUTSELECT
 arrive => NS.OUTPUTSELECT
-arrive => Mux3.IN12
-arrive => always1.IN1
-depart => always1.IN0
-depart => always1.IN0
-fill => always1.IN1
-drain => Mux3.IN13
+arrive => Mux34.IN15
+arrive => Mux4.IN12
+arrive => always0.IN1
+arrive => LED[1].IN0
+depart => always0.IN0
+depart => LED[1].IN1
+depart => always0.IN0
+fill => always0.IN1
+drain => Mux4.IN13
 iport => NS.DATAA
 iport => NS.DATAA
 iport => NS.DATAA
-iport => Mux0.IN12
-iport => always1.IN1
+iport => Mux1.IN12
+iport => always0.IN1
 iport => NS.DATAA
-oport => NS.DATAA
-oport => Mux0.IN13
-oport => Mux3.IN14
 oport => NS.DATAA
 oport => Mux1.IN13
-oport => Mux2.IN11
+oport => Mux4.IN14
+oport => NS.DATAA
+oport => Mux2.IN13
+oport => Mux3.IN11
 select => select.IN1
 testPressure => testPressure.IN2
 reset => reset.IN6
@@ -191,7 +194,7 @@ reset => reset.IN2
 
 
 |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH
-BT <= btn.DB_MAX_OUTPUT_PORT_TYPE
+out <= out$latch.DB_MAX_OUTPUT_PORT_TYPE
 Clock => Clock.IN2
 reset => reset.IN2
 button => Mux2.IN3
@@ -225,12 +228,36 @@ rst => q~reg0.ACLR
 
 |DE1_SoC|interlock:i_lock|limit_pressure:limit0
 limit <= DFlipFlop:flip0.q
-key => always0.IN0
-key => always0.IN0
+key => key.IN1
 SW => always0.IN1
 SW => always0.IN1
-clk => clk.IN1
-reset => reset.IN1
+clk => clk.IN2
+reset => reset.IN2
+
+
+|DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL
+out <= out$latch.DB_MAX_OUTPUT_PORT_TYPE
+Clock => Clock.IN2
+reset => reset.IN2
+button => Mux2.IN3
+button => Mux3.IN2
+button => Mux3.IN3
+
+
+|DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:msb
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
 
 
 |DE1_SoC|interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for interlockSystem
-Sun Jan 24 23:28:10 2016
+Mon Jan 25 18:37:12 2016
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
@@ -22,18 +22,19 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
  14. Parameter Settings for User Entity Instance: interlock:i_lock|diff_pressure:diff0
  15. Parameter Settings for User Entity Instance: interlock:i_lock|diff_pressure:diff0|inputHandler:inputH
  16. Parameter Settings for User Entity Instance: interlock:i_lock|limit_pressure:limit0
- 17. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip3"
- 18. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip2"
- 19. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip1"
- 20. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip0"
- 21. Port Connectivity Checks: "interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0"
- 22. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|DFlipFlop:flip0"
- 23. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb"
- 24. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 17. Parameter Settings for User Entity Instance: interlock:i_lock|limit_pressure:limit0|inputHandler:inputL
+ 18. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip3"
+ 19. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip2"
+ 20. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip1"
+ 21. Port Connectivity Checks: "interlock:i_lock|DFlipFlop:flip0"
+ 22. Port Connectivity Checks: "interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0"
+ 23. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|DFlipFlop:flip0"
+ 24. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb"
+ 25. Port Connectivity Checks: "interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,13 +61,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jan 24 23:28:10 2016       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jan 25 18:37:12 2016       ;
 ; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
 ; Revision Name                   ; interlockSystem                             ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 78                                          ;
+; Total registers                 ; 39                                          ;
 ; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -200,79 +201,89 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 49                    ;
-;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 89                    ;
-;     -- 7 input functions                    ; 1                     ;
-;     -- 6 input functions                    ; 7                     ;
-;     -- 5 input functions                    ; 4                     ;
-;     -- 4 input functions                    ; 29                    ;
-;     -- <=3 input functions                  ; 48                    ;
-;                                             ;                       ;
-; Dedicated logic registers                   ; 78                    ;
-;                                             ;                       ;
-; I/O pins                                    ; 67                    ;
-;                                             ;                       ;
-; Total DSP Blocks                            ; 0                     ;
-;                                             ;                       ;
-; Maximum fan-out node                        ; DFlipFlop:time_flip|q ;
-; Maximum fan-out                             ; 67                    ;
-; Total fan-out                               ; 585                   ;
-; Average fan-out                             ; 1.94                  ;
-+---------------------------------------------+-----------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 58                                 ;
+;                                             ;                                    ;
+; Combinational ALUT usage for logic          ; 107                                ;
+;     -- 7 input functions                    ; 1                                  ;
+;     -- 6 input functions                    ; 7                                  ;
+;     -- 5 input functions                    ; 5                                  ;
+;     -- 4 input functions                    ; 32                                 ;
+;     -- <=3 input functions                  ; 62                                 ;
+;                                             ;                                    ;
+; Dedicated logic registers                   ; 39                                 ;
+;                                             ;                                    ;
+; I/O pins                                    ; 67                                 ;
+;                                             ;                                    ;
+; Total DSP Blocks                            ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; interlock:i_lock|DFlipFlop:flip0|q ;
+; Maximum fan-out                             ; 53                                 ;
+; Total fan-out                               ; 569                                ;
+; Average fan-out                             ; 2.03                               ;
++---------------------------------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
-+--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
-+--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |DE1_SoC                       ; 89 (11)           ; 78 (11)      ; 0                 ; 0          ; 67   ; 0            ; |DE1_SoC                                                                        ; work         ;
-;    |DFlipFlop:time_flip|       ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|DFlipFlop:time_flip                                                    ; work         ;
-;    |interlock:i_lock|          ; 77 (69)           ; 66 (58)      ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock                                                       ; work         ;
-;       |DFlipFlop:flip0|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip0                                       ; work         ;
-;       |DFlipFlop:flip1|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip1                                       ; work         ;
-;       |DFlipFlop:flip2|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip2                                       ; work         ;
-;       |DFlipFlop:flip3|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip3                                       ; work         ;
-;       |diff_pressure:diff0|    ; 7 (0)             ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0                                   ; work         ;
-;          |DFlipFlop:flip0|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|DFlipFlop:flip0                   ; work         ;
-;          |inputHandler:inputH| ; 6 (6)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH               ; work         ;
-;             |DFlipFlop:lsb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb ; work         ;
-;             |DFlipFlop:msb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb ; work         ;
-;       |limit_pressure:limit0|  ; 1 (0)             ; 1 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0                                 ; work         ;
-;          |DFlipFlop:flip0|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0                 ; work         ;
-+--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |DE1_SoC                       ; 107 (11)          ; 39 (11)      ; 0                 ; 0          ; 67   ; 0            ; |DE1_SoC                                                                          ; work         ;
+;    |DFlipFlop:time_flip|       ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|DFlipFlop:time_flip                                                      ; work         ;
+;    |interlock:i_lock|          ; 95 (81)           ; 27 (17)      ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock                                                         ; work         ;
+;       |DFlipFlop:flip0|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip0                                         ; work         ;
+;       |DFlipFlop:flip1|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip1                                         ; work         ;
+;       |DFlipFlop:flip2|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip2                                         ; work         ;
+;       |DFlipFlop:flip3|        ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|DFlipFlop:flip3                                         ; work         ;
+;       |diff_pressure:diff0|    ; 7 (0)             ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0                                     ; work         ;
+;          |DFlipFlop:flip0|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|DFlipFlop:flip0                     ; work         ;
+;          |inputHandler:inputH| ; 6 (6)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH                 ; work         ;
+;             |DFlipFlop:lsb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb   ; work         ;
+;             |DFlipFlop:msb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb   ; work         ;
+;       |limit_pressure:limit0|  ; 7 (0)             ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0                                   ; work         ;
+;          |DFlipFlop:flip0|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0|DFlipFlop:flip0                   ; work         ;
+;          |inputHandler:inputL| ; 6 (6)             ; 2 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL               ; work         ;
+;             |DFlipFlop:lsb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb ; work         ;
+;             |DFlipFlop:msb|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:msb ; work         ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                     ;
-+----------------------------------------------------------------+---------------------------------------------------------------+------------------------+
-; Latch Name                                                     ; Latch Enable Signal                                           ; Free of Timing Hazards ;
-+----------------------------------------------------------------+---------------------------------------------------------------+------------------------+
-; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|btn   ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1 ; yes                    ;
-; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[0] ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1 ; yes                    ;
-; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[1] ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1 ; yes                    ;
-; Number of user-specified and inferred latches = 3              ;                                                               ;                        ;
-+----------------------------------------------------------------+---------------------------------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                         ;
++------------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; Latch Name                                                       ; Latch Enable Signal                                             ; Free of Timing Hazards ;
++------------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; interlock:i_lock|LED[0]                                          ; interlock:i_lock|Mux34                                          ; yes                    ;
+; interlock:i_lock|LED[1]                                          ; interlock:i_lock|Mux7                                           ; yes                    ;
+; interlock:i_lock|LED[2]                                          ; interlock:i_lock|Mux0                                           ; yes                    ;
+; interlock:i_lock|LED[3]                                          ; interlock:i_lock|Mux66                                          ; yes                    ;
+; interlock:i_lock|LED[4]                                          ; interlock:i_lock|Mux68                                          ; yes                    ;
+; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|out     ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1   ; yes                    ;
+; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|out   ; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|Mux1 ; yes                    ;
+; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[0]   ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1   ; yes                    ;
+; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[1]   ; interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|Mux1   ; yes                    ;
+; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|NS[0] ; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|Mux1 ; yes                    ;
+; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|NS[1] ; interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|Mux1 ; yes                    ;
+; Number of user-specified and inferred latches = 11               ;                                                                 ;                        ;
++------------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; interlock:i_lock|HEX4[0,1]             ; Stuck at VCC due to stuck port data_in ;
-; interlock:i_lock|count[17..26]         ; Lost fanout                            ;
-; tBase[11..26]                          ; Lost fanout                            ;
-; Total Number of Removed Registers = 28 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; interlock:i_lock|count[17..26]         ; Lost fanout        ;
+; tBase[11..26]                          ; Lost fanout        ;
+; Total Number of Removed Registers = 26 ;                    ;
++----------------------------------------+--------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
@@ -291,10 +302,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
-; Number of registers using Synchronous Clear  ; 18    ;
+; Total registers                              ; 39    ;
+; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 11    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -306,7 +317,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 16:1               ; 27 bits   ; 270 LEs       ; 0 LEs                ; 270 LEs                ; Yes        ; |DE1_SoC|interlock:i_lock|count[10] ;
+; 16:1               ; 27 bits   ; 270 LEs       ; 0 LEs                ; 270 LEs                ; Yes        ; |DE1_SoC|interlock:i_lock|count[12] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
@@ -316,6 +327,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Parameter Name   ; Value ; Type                               ;
 +------------------+-------+------------------------------------+
 ; TIME_DELAY       ; 16    ; Signed Integer                     ;
+; BLINKS           ; 4     ; Signed Integer                     ;
 ; INIT             ; 0000  ; Unsigned Binary                    ;
 ; PREP             ; 0001  ; Unsigned Binary                    ;
 ; WAIT_FILL        ; 0010  ; Unsigned Binary                    ;
@@ -363,6 +375,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WITHIN         ; 0     ; Unsigned Binary                                            ;
 ; BEYOND         ; 1     ; Unsigned Binary                                            ;
 +----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interlock:i_lock|limit_pressure:limit0|inputHandler:inputL ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                                                ;
+; B              ; 01    ; Unsigned Binary                                                                ;
+; C              ; 10    ; Unsigned Binary                                                                ;
++----------------+-------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -443,28 +467,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 78                          ;
-;     CLR               ; 9                           ;
-;     SCLR              ; 18                          ;
-;     plain             ; 51                          ;
-; arriav_lcell_comb     ; 91                          ;
+; arriav_ff             ; 39                          ;
+;     CLR               ; 11                          ;
+;     SCLR              ; 17                          ;
+;     plain             ; 11                          ;
+; arriav_lcell_comb     ; 123                         ;
 ;     arith             ; 27                          ;
 ;         1 data inputs ; 26                          ;
 ;         2 data inputs ; 1                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 63                          ;
+;     normal            ; 95                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 29                          ;
-;         5 data inputs ; 4                           ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 32                          ;
+;         5 data inputs ; 5                           ;
 ;         6 data inputs ; 7                           ;
 ; boundary_port         ; 67                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.40                        ;
+; Average LUT depth     ; 1.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -483,21 +507,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Sun Jan 24 23:27:59 2016
+    Info: Processing started: Mon Jan 25 18:37:02 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off interlockSystem -c interlockSystem
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file inputhandler.v
     Info (12023): Found entity 1: inputHandler
-Info (12021): Found 3 design units, including 3 entities, in source file limit_pressure.v
+Info (12021): Found 1 design units, including 1 entities, in source file limit_pressure.v
     Info (12023): Found entity 1: limit_pressure
-    Info (12023): Found entity 2: limit_pressure_testBench
-    Info (12023): Found entity 3: limit_pressure_tester
-Info (12021): Found 1 design units, including 1 entities, in source file interlock.v
+Info (12021): Found 3 design units, including 3 entities, in source file interlock.v
     Info (12023): Found entity 1: interlock
-Info (12021): Found 3 design units, including 3 entities, in source file diff_pressure.v
+    Info (12023): Found entity 2: interlock_testBench
+    Info (12023): Found entity 3: interlock_tester
+Info (12021): Found 1 design units, including 1 entities, in source file diff_pressure.v
     Info (12023): Found entity 1: diff_pressure
-    Info (12023): Found entity 2: diff_pressure_testBench
-    Info (12023): Found entity 3: diff_pressure_tester
 Info (12021): Found 1 design units, including 1 entities, in source file dflipflop.v
     Info (12023): Found entity 1: DFlipFlop
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.v
@@ -505,55 +527,63 @@ Info (12021): Found 1 design units, including 1 entities, in source file de1_soc
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
 Info (12128): Elaborating entity "DFlipFlop" for hierarchy "DFlipFlop:time_flip"
 Info (12128): Elaborating entity "interlock" for hierarchy "interlock:i_lock"
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(39): variable "arrive" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(40): variable "iport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(46): variable "iport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(46): variable "depart" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(66): variable "fill" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(66): variable "depart" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(66): variable "arrive" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(76): variable "limitError" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(89): variable "diffError" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(92): variable "oport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(102): variable "oport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(112): variable "drain" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(122): variable "limitError" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(135): variable "diffError" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(138): variable "iport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at interlock.v(148): variable "iport" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10034): Output port "LED[9..8]" at interlock.v(5) has no driver
-Warning (10034): Output port "LED[4..0]" at interlock.v(5) has no driver
+Warning (10240): Verilog HDL Always Construct warning at interlock.v(309): inferring latch(es) for variable "LED", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "LED[0]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[1]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[2]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[3]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[4]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[5]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[6]" at interlock.v(309)
+Info (10041): Inferred latch for "LED[7]" at interlock.v(309)
 Info (12128): Elaborating entity "diff_pressure" for hierarchy "interlock:i_lock|diff_pressure:diff0"
-Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(14): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(18): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(20): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(25): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(27): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(13): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(17): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(18): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(23): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at diff_pressure.v(24): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (12128): Elaborating entity "inputHandler" for hierarchy "interlock:i_lock|diff_pressure:diff0|inputHandler:inputH"
-Warning (10270): Verilog HDL Case Statement warning at inputHandler.v(27): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at inputHandler.v(26): inferring latch(es) for variable "NS", which holds its previous value in one or more paths through the always construct
-Warning (10270): Verilog HDL Case Statement warning at inputHandler.v(38): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at inputHandler.v(37): inferring latch(es) for variable "btn", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "btn" at inputHandler.v(37)
-Info (10041): Inferred latch for "NS[0]" at inputHandler.v(26)
-Info (10041): Inferred latch for "NS[1]" at inputHandler.v(26)
+Warning (10270): Verilog HDL Case Statement warning at inputHandler.v(23): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at inputHandler.v(22): inferring latch(es) for variable "NS", which holds its previous value in one or more paths through the always construct
+Warning (10270): Verilog HDL Case Statement warning at inputHandler.v(35): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at inputHandler.v(34): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out" at inputHandler.v(34)
+Info (10041): Inferred latch for "NS[0]" at inputHandler.v(22)
+Info (10041): Inferred latch for "NS[1]" at inputHandler.v(22)
 Info (12128): Elaborating entity "limit_pressure" for hierarchy "interlock:i_lock|limit_pressure:limit0"
-Warning (13012): Latch interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|btn has unsafe behavior
+Warning (10235): Verilog HDL Always Construct warning at limit_pressure.v(13): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at limit_pressure.v(17): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at limit_pressure.v(18): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at limit_pressure.v(23): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at limit_pressure.v(24): variable "PS" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (13012): Latch interlock:i_lock|LED[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|DFlipFlop:flip0|q
+Warning (13012): Latch interlock:i_lock|LED[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|DFlipFlop:flip0|q
+Warning (13012): Latch interlock:i_lock|LED[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|DFlipFlop:flip0|q
+Warning (13012): Latch interlock:i_lock|LED[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|DFlipFlop:flip0|q
+Warning (13012): Latch interlock:i_lock|LED[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|DFlipFlop:flip0|q
+Warning (13012): Latch interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|out has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb|q
+Warning (13012): Latch interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|out has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:msb|q
 Warning (13012): Latch interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb|q
 Warning (13012): Latch interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|NS[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:msb|q
+Warning (13012): Latch interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|NS[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:msb|q
+Warning (13012): Latch interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|NS[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:msb|q
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX4[0]" is stuck at VCC
     Warning (13410): Pin "HEX4[1]" is stuck at VCC
-    Warning (13410): Pin "LEDR[0]" is stuck at GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND
-    Warning (13410): Pin "LEDR[2]" is stuck at GND
-    Warning (13410): Pin "LEDR[3]" is stuck at GND
-    Warning (13410): Pin "LEDR[4]" is stuck at GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND
-    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.map.smsg
@@ -565,14 +595,14 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[9]"
-Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 105 logic cells
+    Info (21061): Implemented 111 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 732 megabytes
-    Info: Processing ended: Sun Jan 24 23:28:10 2016
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 731 megabytes
+    Info: Processing ended: Mon Jan 25 18:37:12 2016
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
 

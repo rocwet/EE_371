@@ -2,196 +2,340 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -5.352
+TNS   : -16.973
+
+Type  : Slow 1100mV 85C Model Setup 'SW[0]'
+Slack : -3.388
+TNS   : -6.620
+
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.516
-TNS   : -12.595
+Slack : -3.264
+TNS   : -12.694
 
 Type  : Slow 1100mV 85C Model Setup 'DFlipFlop:time_flip|q'
-Slack : -2.362
-TNS   : -111.527
+Slack : -3.065
+TNS   : -48.587
+
+Type  : Slow 1100mV 85C Model Setup 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : -1.958
+TNS   : -5.580
 
 Type  : Slow 1100mV 85C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -1.904
-TNS   : -5.330
+Slack : -1.418
+TNS   : -3.879
 
 Type  : Slow 1100mV 85C Model Setup 'tBase[10]'
-Slack : -1.241
-TNS   : -1.241
+Slack : -1.041
+TNS   : -1.041
 
 Type  : Slow 1100mV 85C Model Hold 'DFlipFlop:time_flip|q'
-Slack : -0.420
-TNS   : -0.592
+Slack : -0.483
+TNS   : -0.988
+
+Type  : Slow 1100mV 85C Model Hold 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -0.018
+TNS   : -0.018
+
+Type  : Slow 1100mV 85C Model Hold 'tBase[10]'
+Slack : 0.021
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.270
+Slack : 0.073
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.357
+Slack : 0.203
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'tBase[10]'
-Slack : 0.413
+Type  : Slow 1100mV 85C Model Hold 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.597
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.397
-TNS   : -5.971
+Type  : Slow 1100mV 85C Model Hold 'SW[0]'
+Slack : 0.750
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
 Slack : -0.394
-TNS   : -35.805
+TNS   : -14.178
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -5.892
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'tBase[10]'
 Slack : -0.394
-TNS   : -0.520
+TNS   : -0.620
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW[0]'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.364
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.341
+Slack : 0.391
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -5.089
+TNS   : -16.207
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.457
-TNS   : -13.421
+Slack : -3.425
+TNS   : -13.440
+
+Type  : Slow 1100mV 0C Model Setup 'SW[0]'
+Slack : -3.269
+TNS   : -6.301
 
 Type  : Slow 1100mV 0C Model Setup 'DFlipFlop:time_flip|q'
-Slack : -2.357
-TNS   : -108.917
+Slack : -3.015
+TNS   : -47.320
+
+Type  : Slow 1100mV 0C Model Setup 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : -2.012
+TNS   : -5.618
 
 Type  : Slow 1100mV 0C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -1.881
-TNS   : -5.265
+Slack : -1.404
+TNS   : -3.910
 
 Type  : Slow 1100mV 0C Model Setup 'tBase[10]'
-Slack : -1.289
-TNS   : -1.289
+Slack : -1.058
+TNS   : -1.058
 
 Type  : Slow 1100mV 0C Model Hold 'DFlipFlop:time_flip|q'
-Slack : -0.381
-TNS   : -0.488
+Slack : -0.455
+TNS   : -0.925
+
+Type  : Slow 1100mV 0C Model Hold 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -0.038
+TNS   : -0.038
 
 Type  : Slow 1100mV 0C Model Hold 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.166
-TNS   : 0.000
+Slack : -0.007
+TNS   : -0.007
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.244
+Slack : 0.029
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'tBase[10]'
-Slack : 0.501
+Slack : 0.087
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.453
-TNS   : -6.364
+Type  : Slow 1100mV 0C Model Hold 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.498
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'SW[0]'
+Slack : 0.638
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
 Slack : -0.394
-TNS   : -35.624
+TNS   : -14.196
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -6.341
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'tBase[10]'
 Slack : -0.394
-TNS   : -0.513
+TNS   : -0.625
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.344
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : 0.290
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.716
-TNS   : -3.958
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW[0]'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -3.216
+TNS   : -9.922
+
+Type  : Fast 1100mV 85C Model Setup 'SW[0]'
+Slack : -2.497
+TNS   : -4.226
 
 Type  : Fast 1100mV 85C Model Setup 'DFlipFlop:time_flip|q'
-Slack : -1.104
-TNS   : -50.201
+Slack : -1.990
+TNS   : -23.912
 
-Type  : Fast 1100mV 85C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -0.940
-TNS   : -2.399
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -1.852
+TNS   : -3.563
+
+Type  : Fast 1100mV 85C Model Setup 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : -0.951
+TNS   : -2.608
 
 Type  : Fast 1100mV 85C Model Setup 'tBase[10]'
-Slack : -0.677
-TNS   : -0.677
+Slack : -0.622
+TNS   : -0.622
+
+Type  : Fast 1100mV 85C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
+Slack : -0.559
+TNS   : -1.516
 
 Type  : Fast 1100mV 85C Model Hold 'DFlipFlop:time_flip|q'
-Slack : -0.373
-TNS   : -0.636
+Slack : -0.415
+TNS   : -1.511
 
 Type  : Fast 1100mV 85C Model Hold 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -0.003
-TNS   : -0.003
+Slack : -0.105
+TNS   : -0.302
 
 Type  : Fast 1100mV 85C Model Hold 'tBase[10]'
-Slack : 0.143
+Slack : -0.072
+TNS   : -0.072
+
+Type  : Fast 1100mV 85C Model Hold 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : 0.021
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.187
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'SW[0]'
+Slack : 0.505
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.473
-TNS   : -1.507
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
-Slack : 0.053
-TNS   : 0.000
+Slack : -0.305
+TNS   : -1.161
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'tBase[10]'
-Slack : 0.153
+Slack : -0.025
+TNS   : -0.025
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW[0]'
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.426
+Slack : 0.449
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.293
-TNS   : -3.363
+Type  : Fast 1100mV 0C Model Setup 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -2.819
+TNS   : -8.707
+
+Type  : Fast 1100mV 0C Model Setup 'SW[0]'
+Slack : -2.071
+TNS   : -3.410
 
 Type  : Fast 1100mV 0C Model Setup 'DFlipFlop:time_flip|q'
-Slack : -0.965
-TNS   : -42.761
+Slack : -1.939
+TNS   : -21.096
 
-Type  : Fast 1100mV 0C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -0.841
-TNS   : -2.094
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -1.621
+TNS   : -3.056
+
+Type  : Fast 1100mV 0C Model Setup 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : -0.872
+TNS   : -2.319
 
 Type  : Fast 1100mV 0C Model Setup 'tBase[10]'
-Slack : -0.641
-TNS   : -0.641
+Slack : -0.572
+TNS   : -0.572
+
+Type  : Fast 1100mV 0C Model Setup 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
+Slack : -0.516
+TNS   : -1.330
 
 Type  : Fast 1100mV 0C Model Hold 'DFlipFlop:time_flip|q'
-Slack : -0.358
-TNS   : -0.602
+Slack : -0.400
+TNS   : -1.446
 
 Type  : Fast 1100mV 0C Model Hold 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : -0.071
-TNS   : -0.086
+Slack : -0.150
+TNS   : -0.404
 
 Type  : Fast 1100mV 0C Model Hold 'tBase[10]'
-Slack : 0.122
-TNS   : 0.000
+Slack : -0.086
+TNS   : -0.086
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.181
+Slack : -0.076
+TNS   : -0.076
+
+Type  : Fast 1100mV 0C Model Hold 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : -0.040
+TNS   : -0.040
+
+Type  : Fast 1100mV 0C Model Hold 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'SW[0]'
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.494
-TNS   : -1.503
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
-Slack : 0.076
-TNS   : 0.000
+Slack : -0.313
+TNS   : -1.189
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'tBase[10]'
-Slack : 0.159
+Slack : 0.010
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW[0]'
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DFlipFlop:time_flip|q'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|DFlipFlop:flip0|q'
+Slack : 0.362
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|diff_pressure:diff0|inputHandler:inputH|DFlipFlop:lsb|q'
-Slack : 0.433
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'interlock:i_lock|limit_pressure:limit0|inputHandler:inputL|DFlipFlop:lsb|q'
+Slack : 0.458
 TNS   : 0.000
 
 ------------------------------------------------------------
