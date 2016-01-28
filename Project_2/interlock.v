@@ -19,10 +19,14 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
   wire diffError, limitError;
   
   /* TIME DELAY of ~ 5 seconds */
-  parameter TIME_DELAY = 16;
-  parameter BLINKS = 4; //(2^(BLINKS - 1))
+//  parameter TIME_DELAY = 16;
+//  parameter BLINKS = 4; //(2^(BLINKS - 1))
 //  parameter TIME_DELAY = 2;
 //  parameter BLINKS = 2;
+  parameter TIME_DELAY = 5;
+  parameter BLINKS = 5;
+//	parameter TIME_DELAY = 14;
+//  parameter BLINKS = 4;
   
   /* define conditions */
   parameter [3:0] INIT             = 4'h0, PREP             = 4'h1, WAIT_FILL  = 4'h2, FILLING  = 4'h3,
@@ -306,7 +310,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 		endcase
 	end
 	
-	always @(PS or arrive or depart or count) begin
+	always @(PS or count) begin
 		case (PS) 
 		 
 			/* INTIAL CONDITION */
@@ -321,51 +325,100 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 				
 			/* PREP CONDITION */
 			PREP: begin
-				if (arrive) LED[0] = 1'h1;
-				else if (depart) LED[1] = 1'h1;
-				
+				if (arrive) begin
+					LED[0] = 1'h1;
+					LED[1] = 1'h0;
+				end
+				else if (depart) begin 
+					LED[1] = 1'h1;
+					LED[0] = 1'h0;
+				end
+				LED[2] = 1'h0;
 				LED[3] = 1'h0;
 				LED[4] = count[TIME_DELAY - BLINKS];
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 			
 			/* WAITING TO FILL CONDITION */
 			WAIT_FILL: begin
-				LED[4] = 0;
+				LED[2] = 1'h0;
+				LED[3] = 1'h0;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 
 			/* FILLING CONDITION*/
 			FILLING: begin
+				LED[2] = 1'h0;
+				LED[3] = 1'h0;
 				LED[4] = count[TIME_DELAY - BLINKS];
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 			
 			/* WAITING FOR OUTER PORT TO OPEN */
 			WAIT_OPORT_OPEN: begin
-			
+				LED[2] = 1'h0;
+				LED[3] = 1'h0;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 
 			/* WAITING FOR OUTER PORT TO OPEN */
 			WAIT_OPORT_CLOSE: begin
 				LED[2] = 1'b1;
+				LED[3] = 1'h0;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 			
 			/* WAITING FOR DRAIN CONDITION */
 			WAIT_DRAIN: begin
 				LED[2] = 1'b0;
+				LED[3] = 1'h0;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 			
 			/* DRAINING CONDITION */
 			DRAINING: begin
+				LED[2] = 1'h0;
+				LED[3] = 1'h0;
 				LED[4] = count[TIME_DELAY - BLINKS];
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;			
 			end
 				
 			/* WAITING FOR INNER PORT TO OPEN */
 			WAIT_IPORT_OPEN: begin
-				
+				LED[2] = 1'h0;
+				LED[3] = 1'h0;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 				
 			/* WAITING FOR INNER PORT TO CLOSE */
 			WAIT_IPORT_CLOSE: begin
-				LED[3] = 1'b1;
+				LED[2] = 1'h0;
+				LED[3] = 1'h1;
+				LED[4] = 1'h0;
+				LED[5] = 1'h0;
+				LED[6] = 1'h0;
+				LED[7] = 1'h0;
 			end
 				
 			/* ERROR CONDITION */
@@ -374,7 +427,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 			end
 		 
 			default: begin
-				
+				//LED[7:0] = 8'hXX;
 			end
 		endcase
 	end
