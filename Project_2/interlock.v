@@ -24,6 +24,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 //  parameter TIME_DELAY = 2;
 //  parameter BLINKS = 2;
   parameter TIME_DELAY = 5;
+  
   parameter BLINKS = 5;
 //	parameter TIME_DELAY = 14;
 //  parameter BLINKS = 4;
