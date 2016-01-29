@@ -1,7 +1,7 @@
-//`include "DFlipFlop.v"
-//`include "diff_pressure.v"
-//`include "limit_pressure.v"
-//`include "inputHandler.v"
+`include "DFlipFlop.v"
+`include "diff_pressure.v"
+`include "limit_pressure.v"
+`include "inputHandler.v"
 
 module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill, drain, iport, oport, select, testPressure, reset, clock);
   
@@ -61,7 +61,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
         else begin
           NS = PREP;
         end
-		end
+			end
 		
       /* WAITING TO FILL CONDITION */
       WAIT_FILL: begin
