@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Jan 28 03:54:04 2016
-Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri Jan 29 10:40:43 2016
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
 Revision Name : interlockSystem
 Top-level Entity Name : DE1_SoC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 691
+Total registers : 709
 Total pins : 67
 Total virtual pins : 0
 Total block memory bits : 20,480

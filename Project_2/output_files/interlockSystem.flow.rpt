@@ -1,6 +1,6 @@
 Flow report for interlockSystem
-Thu Jan 28 03:57:30 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Fri Jan 29 10:42:28 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -38,29 +38,29 @@ agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Thu Jan 28 03:57:30 2016      ;
-; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
-; Revision Name                   ; interlockSystem                            ;
-; Top-level Entity Name           ; DE1_SoC                                    ;
-; Family                          ; Cyclone V                                  ;
-; Device                          ; 5CSEMA5F31C6                               ;
-; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 361 / 32,070 ( 1 % )                       ;
-; Total registers                 ; 696                                        ;
-; Total pins                      ; 67 / 457 ( 15 % )                          ;
-; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 20,480 / 4,065,280 ( < 1 % )               ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
-; Total HSSI RX PCSs              ; 0                                          ;
-; Total HSSI PMA RX Deserializers ; 0                                          ;
-; Total HSSI TX PCSs              ; 0                                          ;
-; Total HSSI PMA TX Serializers   ; 0                                          ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
-+---------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Fri Jan 29 10:42:28 2016       ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
+; Revision Name                   ; interlockSystem                             ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 372 / 32,070 ( 1 % )                        ;
+; Total registers                 ; 722                                         ;
+; Total pins                      ; 67 / 457 ( 15 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 20,480 / 4,065,280 ( < 1 % )                ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/28/2016 03:53:54 ;
+; Start date & time ; 01/29/2016 10:40:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; interlockSystem     ;
 +-------------------+---------------------+
@@ -79,10 +79,9 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------------------------------------+-----------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                   ; Default Value   ; Entity Name ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------+-----------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 145851856345784.145398203408036                                                                         ; --              ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 109952949375159.145409281805392                                                                         ; --              ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                             ; --              ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                               ; <None>          ; --          ; --               ;
-; ENABLE_OCT_DONE                     ; Off                                                                                                     ; On              ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                      ; --              ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                      ; --              ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                       ; --              ; --          ; --               ;
@@ -127,12 +126,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 662 MB              ; 00:00:09                           ;
-; Fitter                    ; 00:02:28     ; 1.1                     ; 2913 MB             ; 00:05:11                           ;
-; Assembler                 ; 00:00:17     ; 1.0                     ; 670 MB              ; 00:00:16                           ;
-; TimeQuest Timing Analyzer ; 00:00:22     ; 1.1                     ; 961 MB              ; 00:00:21                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 557 MB              ; 00:00:02                           ;
-; Total                     ; 00:03:20     ; --                      ; --                  ; 00:05:59                           ;
+; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 791 MB              ; 00:00:46                           ;
+; Fitter                    ; 00:01:02     ; 1.6                     ; 2706 MB             ; 00:01:29                           ;
+; Assembler                 ; 00:00:13     ; 1.0                     ; 723 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:18     ; 1.0                     ; 1071 MB             ; 00:00:19                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 653 MB              ; 00:00:02                           ;
+; Total                     ; 00:02:00     ; --                      ; --                  ; 00:02:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -141,11 +140,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; Ly4              ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; EE-361pc18       ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EE-361pc18       ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EE-361pc18       ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EE-361pc18       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; EE-361pc18       ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

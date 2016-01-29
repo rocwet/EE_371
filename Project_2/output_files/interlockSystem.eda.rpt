@@ -1,6 +1,6 @@
 EDA Netlist Writer report for interlockSystem
-Thu Jan 28 03:57:30 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Fri Jan 29 10:42:28 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jan 28 03:57:30 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Jan 29 10:42:28 2016 ;
 ; Revision Name             ; interlockSystem                       ;
 ; Top-level Entity Name     ; DE1_SoC                               ;
 ; Family                    ; Cyclone V                             ;
@@ -67,13 +67,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                              ;
-+-----------------------------------------------------------------------------------------+
-; Generated Files                                                                         ;
-+-----------------------------------------------------------------------------------------+
-; C:/Users/Denny/Documents/GitHub/EE_371/Project_2/simulation/modelsim/interlockSystem.vo ;
-+-----------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                ;
++-------------------------------------------------------------------------------------------+
+; Generated Files                                                                           ;
++-------------------------------------------------------------------------------------------+
+; C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/simulation/modelsim/interlockSystem.vo ;
++-------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,15 +81,15 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Thu Jan 28 03:57:27 2016
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+    Info: Processing started: Fri Jan 29 10:42:26 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off interlockSystem -c interlockSystem
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
-Info (204019): Generated file interlockSystem.vo in folder "C:/Users/Denny/Documents/GitHub/EE_371/Project_2/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file interlockSystem.vo in folder "C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 569 megabytes
-    Info: Processing ended: Thu Jan 28 03:57:30 2016
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 653 megabytes
+    Info: Processing ended: Fri Jan 29 10:42:28 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

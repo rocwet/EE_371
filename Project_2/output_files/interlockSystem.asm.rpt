@@ -1,6 +1,6 @@
 Assembler report for interlockSystem
-Thu Jan 28 03:56:59 2016
-Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Fri Jan 29 10:42:04 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
 ---------------------
@@ -11,7 +11,7 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/Denny/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof
+  6. Assembler Device Options: C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jan 28 03:56:59 2016 ;
+; Assembler Status      ; Successful - Fri Jan 29 10:42:04 2016 ;
 ; Revision Name         ; interlockSystem                       ;
 ; Top-level Entity Name ; DE1_SoC                               ;
 ; Family                ; Cyclone V                             ;
@@ -64,24 +64,24 @@ agreement for further details.
 +--------+------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Assembler Generated Files                                                         ;
-+-----------------------------------------------------------------------------------+
-; File Name                                                                         ;
-+-----------------------------------------------------------------------------------+
-; C:/Users/Denny/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof ;
-+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof ;
++-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Denny/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof ;
-+----------------+--------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                    ;
-+----------------+--------------------------------------------------------------------------------------------+
-; Device         ; 5CSEMA5F31C6                                                                               ;
-; JTAG usercode  ; 0x00C761DD                                                                                 ;
-; Checksum       ; 0x00C761DD                                                                                 ;
-+----------------+--------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/dennyly/Documents/GitHub/EE_371/Project_2/output_files/interlockSystem.sof ;
++----------------+----------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                      ;
++----------------+----------------------------------------------------------------------------------------------+
+; Device         ; 5CSEMA5F31C6                                                                                 ;
+; JTAG usercode  ; 0x00C81F57                                                                                   ;
+; Checksum       ; 0x00C81F57                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -89,14 +89,14 @@ agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
-    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Thu Jan 28 03:56:42 2016
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+    Info: Processing started: Fri Jan 29 10:41:51 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off interlockSystem -c interlockSystem
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 678 megabytes
-    Info: Processing ended: Thu Jan 28 03:56:59 2016
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 723 megabytes
+    Info: Processing ended: Fri Jan 29 10:42:04 2016
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
 
 

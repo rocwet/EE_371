@@ -414,53 +414,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 			end
 				
 			/* WAITING FOR INNER PORT TO CLOSE */
-			WAIT_IPORT_CLOSE// NOW ARRIVING AT THE INTERLOCK 
-		// Arrival signal, waits for the 5 second arrival
-		arrive = 1; #100;
-		arrive = 0; #60;
-		
-		// Fill Signal, waits for the 7 seconds to pressurize
-		fill = 1; #40;
-		fill = 0; #100;
-		
-		 // Opens and closes the oport
-		oport = 1; #40;
-		oport = 0; #40;
-		
-		// Drain Signal, waits for the 8 seconds to drain
-		drain = 1; #100;
-		drain = 0; #80;
-		
-		// Opens and closes tje iport
-		iport = 1; #40;
-		iport = 0; #40;
-		
-		// BACK TO THE INITIAL STATE 
-
-		// NOW DEPARTING THE INTERLOCK 
-		// Opens the inner port and sends the departing signal
-		iport = 1; #40;
-		depart = 1; #20;
-	   
-		// Closes the inner port
-		iport = 0; #100;
-		depart = 0; #60;
-		
-		// Fill Signal, pressurizes the interlock chamber
-		fill = 1; #40;
-		fill = 0; #100;
-		
-		// Open and closes the outer port 
-		oport = 1; #40;
-		oport = 0; #40;
-		
-		// Drain Signal, depressurizes the interlock chamber
-		drain = 1; #100;
-		drain = 0; #80;
-		
-		// Open and closes the inner port
-		iport = 1; #40;
-		iport = 0; #40;: begin
+			WAIT_IPORT_CLOSE: begin
 				LED[2] = 1'h0;
 				LED[3] = 1'h1;
 				LED[4] = 1'h0;
