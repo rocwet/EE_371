@@ -1,7 +1,7 @@
-`include "DFlipFlop.v"
-`include "diff_pressure.v"
-`include "limit_pressure.v"
-`include "inputHandler.v"
+// `include "DFlipFlop.v"
+// `include "diff_pressure.v"
+// `include "limit_pressure.v"
+// `include "inputHandler.v"
 
 module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill, drain, iport, oport, select, testPressure, reset, clock);
   
@@ -19,12 +19,12 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
   wire diffError, limitError;
   
   /* TIME DELAY of ~ 5 seconds */
-	// parameter TIME_DELAY = 16;
-	// parameter BLINKS = 4; // (2^(BLINKS-1))
+	parameter TIME_DELAY = 16;
+	parameter BLINKS = 4; // (2^(BLINKS-1))
 	
 	/* For Simulations (gtkwave) */
-	parameter TIME_DELAY = 2;
-	parameter BLINKS = 2;
+	// parameter TIME_DELAY = 2;
+	// parameter BLINKS = 2;
 
 	/* Real Time Output (signal tap) */
   // parameter TIME_DELAY = 5;
@@ -414,7 +414,53 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 			end
 				
 			/* WAITING FOR INNER PORT TO CLOSE */
-			WAIT_IPORT_CLOSE: begin
+			WAIT_IPORT_CLOSE// NOW ARRIVING AT THE INTERLOCK 
+		// Arrival signal, waits for the 5 second arrival
+		arrive = 1; #100;
+		arrive = 0; #60;
+		
+		// Fill Signal, waits for the 7 seconds to pressurize
+		fill = 1; #40;
+		fill = 0; #100;
+		
+		 // Opens and closes the oport
+		oport = 1; #40;
+		oport = 0; #40;
+		
+		// Drain Signal, waits for the 8 seconds to drain
+		drain = 1; #100;
+		drain = 0; #80;
+		
+		// Opens and closes tje iport
+		iport = 1; #40;
+		iport = 0; #40;
+		
+		// BACK TO THE INITIAL STATE 
+
+		// NOW DEPARTING THE INTERLOCK 
+		// Opens the inner port and sends the departing signal
+		iport = 1; #40;
+		depart = 1; #20;
+	   
+		// Closes the inner port
+		iport = 0; #100;
+		depart = 0; #60;
+		
+		// Fill Signal, pressurizes the interlock chamber
+		fill = 1; #40;
+		fill = 0; #100;
+		
+		// Open and closes the outer port 
+		oport = 1; #40;
+		oport = 0; #40;
+		
+		// Drain Signal, depressurizes the interlock chamber
+		drain = 1; #100;
+		drain = 0; #80;
+		
+		// Open and closes the inner port
+		iport = 1; #40;
+		iport = 0; #40;: begin
 				LED[2] = 1'h0;
 				LED[3] = 1'h1;
 				LED[4] = 1'h0;
@@ -429,7 +475,7 @@ module interlock (LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart, fill,
 			end
 		 
 			default: begin
-				//LED[7:0] = 8'hXX;
+				LED[7:0] = 8'hXX;
 			end
 		endcase
 	end
@@ -555,7 +601,7 @@ module interlock_tester(LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart,
 		fill = 1; #40;
 		fill = 0; #100;
 		
-	   // Opens and closes the oport
+		 // Opens and closes the oport
 		oport = 1; #40;
 		oport = 0; #40;
 		
@@ -568,8 +614,8 @@ module interlock_tester(LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart,
 		iport = 0; #40;
 		
 		// BACK TO THE INITIAL STATE 
+
 		// NOW DEPARTING THE INTERLOCK 
-		
 		// Opens the inner port and sends the departing signal
 		iport = 1; #40;
 		depart = 1; #20;
@@ -582,7 +628,7 @@ module interlock_tester(LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart,
 		fill = 1; #40;
 		fill = 0; #100;
 		
-	   // Open and closes the outer port 
+		// Open and closes the outer port 
 		oport = 1; #40;
 		oport = 0; #40;
 		
@@ -593,6 +639,72 @@ module interlock_tester(LED, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, arrive, depart,
 		// Open and closes the inner port
 		iport = 1; #40;
 		iport = 0; #40;
+
+		// // Check ERROR state for differential pressure
+		// arrive = 1; #100;
+		// arrive = 0; #60;
+		
+		// fill = 1; #40;
+		// testPressure = 1; #20;
+		// fill = 0; #80;
+		// testPressure = 0; #20;
+		
+		// oport = 1; #40;
+		// oport = 0; #40;
+		
+		// reset = 1; #40;
+		// reset = 0; #40;
+
+		// arrive = 1; #100;
+		// arrive = 0; #60;
+		
+		// fill = 1; #40;
+		// fill = 0; #100;
+		
+		// oport = 1; #40;
+		// oport = 0; #40;
+		
+		// drain = 1; #40;
+		// testPressure = 1; #20;
+		// drain = 0; #80;
+		// testPressure = 0; #80;
+		
+		// iport = 1; #40;
+		// iport = 0; #40;
+
+		// // Check ERROR state for pressure LIMITS
+		// select = 1;
+		// arrive = 1; #100;
+		// arrive = 0; #60;
+		
+		// fill = 1; #40;
+		// testPressure = 1; #40;
+		// testPressure = 0; #20;
+		// fill = 0; #40;
+		
+		// oport = 1; #40;
+		// oport = 0; #40;
+		
+		// reset = 1; #40;
+		// reset = 0; #40;
+
+		// select = 1;
+		// arrive = 1; #100;
+		// arrive = 0; #60;
+		
+		// fill = 1; #40;
+		// fill = 0; #100;
+		
+		// oport = 1; #40;
+		// oport = 0; #40;
+		
+		// drain = 1; #60;
+		// testPressure = 1; #40;
+		// testPressure = 0; #20;
+		// drain = 0; #40;
+		
+		// iport = 1; #40;
+		// iport = 0; #40;
 		$finish;
 	end
   
